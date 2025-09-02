@@ -25,7 +25,7 @@ print(f"A passagem fica no valor de {valor:.2f}")
 
 #-----------------------------------------------------
 
-# Segubndo desafio
+# Segundo desafio
 
 salario = float(input("Digite o valor do seu salario: \n"))
 perc_increase = 0.15
