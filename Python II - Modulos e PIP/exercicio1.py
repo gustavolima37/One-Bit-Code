@@ -12,5 +12,5 @@ strings e que possua as seguintes funcionalidades:
 name = input('Digite uma palavra: ').upper()
 print(f'Palavra escrita: {name}\nPalavra Invertida: {modulo_string.invert(name)}')
 print('')
-print(f'Retornando apenas letras indice par: {modulo_string.i_par(name)}')
-print(f'Retornando apenas letras indice impar: {modulo_string.i_impar(name)}')
+print(f'Retornando apenas letras indice par: {modulo_string.caracter_par(name)}')
+print(f'Retornando apenas letras indice impar: {modulo_string.caracter_impar(name)}')

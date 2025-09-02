@@ -3,8 +3,8 @@
 def invert(string):
     return string[::-1]
 
-def i_par(string):
+def caracter_par(string):
     return string[::2]
 
-def i_impar(string):
+def caracter_impar(string):
     return string[1::2]
