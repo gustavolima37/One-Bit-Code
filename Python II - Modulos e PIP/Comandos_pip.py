@@ -27,4 +27,7 @@ pip install
 pip freeze (mostrar informação da versão da biblioteca)
 
 pip freeze -l > requirements.txt
+
+pra desinstalar as bibliotecas no ambiente venv
+pip uninstall -r requirements.txt -y
 '''
