@@ -1,0 +1,49 @@
+Objetivo da Aula:
+
+Nesta aula, você vai aprender a planejar os endpoints de uma API para um projeto de software, considerando a descrição do projeto, suas funcionalidades, telas e a estrutura do banco de dados. Este passo é essencial para estruturar o backend de uma forma que suporte eficientemente as operações necessárias, como criar, ler, atualizar e deletar dados (CRUD).
+
+Além disso, você aprenderá a criar um modelo JSON compatível com o Postman, permitindo testar os endpoints desenvolvidos de maneira prática e eficiente.
+
+1. Definindo os endpoints:
+
+O design dos endpoints é um componente crítico no desenvolvimento de APIs, pois define como as aplicações frontend se comunicarão com o backend.
+
+Prompt:
+
+"Agindo como um arquiteto de software e dado o projeto com descrição X, features Y, telas Z, e modelo de banco de dados W, descreva como seriam os endpoints do backend, separando por grupo, incluindo nome, URL, parâmetros de entrada e saída, validações, etc."
+
+2. Extra, gerando um modelo para o Postman e importando-o:
+
+Além de planejar os endpoints, você aprenderá a criar um modelo JSON compatível com o Postman. Isso permite testar os endpoints de forma eficaz, simulando requisições e recebendo respostas, como se a API já estivesse em funcionamento.
+
+Prompt:
+
+"Gere um JSON compatível com o Postman, para que eu possa fazer a importação dele e testar os endpoints quando estiverem funcionais."
+
+Como Importar o Modelo no Postman:
+
+Criação do Modelo JSON: Após gerar o modelo JSON para seus endpoints, salve-o em um arquivo .json no seu computador.
+
+Abertura do Postman: Inicie o Postman no seu computador. Se ainda não o tiver, você pode baixá-lo gratuitamente no site oficial do Postman.
+
+Importação do Modelo:
+
+No Postman, localize e clique no botão Import que se encontra na parte superior esquerda da interface.
+
+Uma nova janela se abrirá, oferecendo várias opções de importação. Você pode arrastar e soltar o arquivo .json diretamente nessa janela ou clicar em File para selecionar o arquivo através do explorador de arquivos do seu sistema operacional.
+
+Selecione o arquivo .json com o modelo dos seus endpoints e confirme a importação.
+
+Revisão e Uso da Coleção Importada:
+
+Após a importação, o Postman mostrará a coleção de endpoints como um novo item na barra lateral esquerda.
+
+Clique na coleção para expandi-la e visualizar os endpoints individuais.
+
+Selecione um endpoint para ver os detalhes, como a URL, método HTTP, cabeçalhos (headers), corpo da requisição (body), etc.
+
+Para testar um endpoint, configure os parâmetros necessários e clique em Send para fazer a requisição. O Postman exibirá a resposta recebida, permitindo analisar o resultado do teste.
+
+Conclusão:
+
+Com a criação de um modelo JSON e sua importação para o Postman, você ganha uma ferramenta poderosa para testar e validar os endpoints da sua API antes mesmo de implementá-los completamente. Este processo não apenas agiliza o desenvolvimento, como também assegura que os endpoints funcionem conforme esperado, contribuindo para a qualidade e confiabilidade do seu projeto de software.

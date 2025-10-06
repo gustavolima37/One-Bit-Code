@@ -1,0 +1,33 @@
+Objetivo da Aula:
+
+Esta aula tem como foco a definição da marca para seu projeto de software, abordando desde a criação de um nome e a verificação da disponibilidade do domínio correspondente até a definição de características essenciais da marca, como personalidade, valor único proposto (UVP), tom de voz, público-alvo, e missão.
+
+Dominar estes elementos é crucial para construir uma identidade de marca forte e coerente que ressoe com seu público-alvo e se destaque no mercado.
+
+1. Criação de Nome e Domínio:
+
+O primeiro passo na criação de sua marca é a escolha de um nome distintivo e a verificação da disponibilidade de um domínio correspondente na internet. Utilize o chatGPT com o seguinte prompt, substituindo "X" pela descrição do seu projeto:
+
+Prompt:
+
+"Dado o seguinte projeto 'X', me dê 10 ideias de nomes (que têm chance do domínio não estar em uso ainda) para o projeto citado."
+
+Esta etapa é essencial para garantir que sua marca tenha uma identificação única e facilmente localizável online.
+
+2. Definição Geral:
+
+Com o nome do projeto definido, a próxima etapa é construir a identidade da sua marca. Utilize o chatGPT para ajudar a definir os aspectos fundamentais da marca, utilizando o seguinte prompt e substituindo "X" pelo nome do projeto e "Y" pela descrição do projeto:
+
+Prompt:
+
+"Dado o nome do projeto 'X' e a descrição 'Y', me ajude a definir a marca dele. Lista sugestões de como a marca seria se fosse uma pessoa, valor único (UVP), tom de voz da sua marca, público alvo principal, necessidades do público-alvo, posicionamento da marca, missão da marca e outras informações fundamentais para definir a marca."
+
+Este passo ajudará a estabelecer uma base sólida sobre a qual sua marca será construída, garantindo que todos os aspectos da comunicação e do marketing estejam alinhados com a visão central do projeto.
+
+Exercício prático
+
+Escolha um projeto de software que esteja desenvolvendo ou planeje desenvolver. Aplique os passos desta aula para criar o nome e definir a identidade da marca. Isso inclui verificar a disponibilidade do domínio para o nome escolhido e detalhar as características da marca, como personalidade, valor único proposto, tom de voz, público-alvo, necessidades desse público e missão. Documente todo o processo e as escolhas feitas.
+
+Conclusão
+
+Nesta aula, aprendemos a importância de escolher um nome adequado para o projeto e verificar a disponibilidade do domínio, bem como a definir a identidade da marca de forma a refletir seus valores, missão e proposta de valor único. Uma definição clara da marca é essencial para criar uma conexão forte com o público-alvo e estabelecer uma presença de mercado distinta e memorável.

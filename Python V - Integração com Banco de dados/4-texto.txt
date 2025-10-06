@@ -1,0 +1,25 @@
+🎥 Aula: Inserindo dados com input() no banco de dados:
+
+- Conectar ao banco de dados title.db usando sqlite3.connect.
+
+- Criar um cursor para executar comandos SQL.
+
+- Pedir dados ao usuário com input():
+
+- Nome do filme (str)
+
+- Ano do filme (int)
+
+- Nota do filme (float)
+
+- Inserir os dados na tabela movies:
+
+- Usou ? como placeholders para evitar SQL injection.
+
+- Passou os valores como uma tupla: (name, year, score).
+
+- Salvar as alterações com connection.commit().
+
+- Fechar a conexão com connection.close().
+
+💡 Resultado: O usuário pode digitar os dados de um filme, e eles serão salvos no banco de dados de forma segura e automática.

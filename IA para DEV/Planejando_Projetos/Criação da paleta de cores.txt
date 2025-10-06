@@ -1,0 +1,42 @@
+Criação da paleta de cores + Logo
+
+Objetivo da Aula:
+
+Nesta aula você vai aprender a criar uma identidade visual para seus projetos de programação, utilizando o chatGPT para gerar sugestões de paletas de cores e logos.
+
+Você aprenderá a definir uma paleta de cores baseando-se na essência de seu projeto e, a seguir, a criar um logo que represente visualmente o projeto, usando ferramentas online para refinamento e vetorização.
+
+1. Definindo a paleta de cores:
+
+Para começar, vamos criar uma paleta de cores para seu projeto. As cores são fundamentais para transmitir o sentimento e a mensagem da sua marca.
+
+1.1. Prompt:
+
+"3 sugestões de paleta de cores (texto, fundo, primária, secundária e destaque) com versão clara e escura, baseada no projeto: Nome (X), Descrição (Y), Definição de marca (Z)".
+
+1.2. Visite https://www.realtimecolors.com para visualizar e testar as paletas sugeridas. Insira as cores nos campos apropriados para ver como elas se complementam.
+
+1.3. Escolha a paleta que mais se alinha com a visão do seu projeto. Considere fatores como legibilidade, contraste e emoção que as cores transmitem.
+
+2. Definindo o Logo:
+
+Agora que temos a paleta de cores, vamos criar um logo que simbolize seu projeto.
+
+2.1. Prompt:
+
+Desenhe um logo (sem texto) baseado na descrição do projeto e na paleta de cores passada ao final com fundo sólido para recorte.
+
+Descrição do Projeto: X
+Paleta de cores: Y
+
+2.2. Acesse https://www.remove.bg/pt-br para remover o fundo da imagem selecionada, garantindo que o logo possa ser aplicado em diversos contextos sem interferências.
+
+2.3. Salve seu logo para usá-lo em seu projeto.
+
+Exercício prático:
+
+Crie uma paleta de cores e um logo para um projeto fictício chamado "CodeHeaven". Descreva brevemente o projeto como uma plataforma online para aprender programação com foco em práticas de código limpo e desenvolvimento ágil. Utilize as ferramentas mencionadas acima para testar as cores e vetorizar seu logo.
+
+Conclusão:
+
+Nesta aula, aprendemos a importância da identidade visual no desenvolvimento de projetos, especificamente como definir uma paleta de cores e criar um logo que represente visualmente a essência do projeto. Essas habilidades são fundamentais para programadores que desejam não apenas desenvolver funcionalidades, mas também apresentar seus projetos de forma profissional e atraente.

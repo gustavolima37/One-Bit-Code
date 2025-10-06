@@ -1,0 +1,32 @@
+Definição da Stack
+____________________________
+
+Objetivo da Aula:
+
+Esta aula tem como foco te ensinar a escolher a stack tecnológica mais adequada para o desenvolvimento de seu projeto. Vamos aprender a analisar as necessidades do projeto, incluindo suas features, para definir quais linguagens de programação, frameworks, bibliotecas, APIs e recursos externos serão mais eficientes na construção do projeto.
+
+Também abordaremos alternativas focadas em JavaScript (ou outra linguagem do seu interesse) para projetos que podem se beneficiar dessa abordagem.
+
+1. Definindo a stack do projeto:
+
+Uma escolha acertada da stack tecnológica é crucial para o sucesso do projeto. Isso implica não apenas na eficiência do desenvolvimento, mas também na performance, manutenção e escalabilidade da aplicação.
+
+1.1. Prompt:
+
+"Agindo como um arquiteto de software e dado o projeto com a descrição X, que inclui [descreva as funcionalidades principais], qual seria a melhor stack e organização (frameworks, bibliotecas, APIs, recursos externos, etc.) para construir este projeto?"
+
+1.2. Seleção da Stack: Com base nas sugestões obtidas, avalie cada opção considerando a compatibilidade com os objetivos do projeto e sua própria familiaridade com as tecnologias. Lembre-se de que a melhor stack é aquela que atende às necessidades do projeto sem adicionar complexidade desnecessária.
+
+2. Alternativa - Foco em JavaScript (ou outra tecnologia que deseje):
+
+2.1. Prompt:
+
+"Considerando um desenvolvimento focado em JavaScript para o projeto com a descrição X, que inclui [descreva as funcionalidades principais], qual seria a melhor stack a utilizar (frameworks, bibliotecas, APIs, recursos externos, etc.)?"
+
+Exercício prático:
+
+Escolha um projeto fictício, por exemplo, um aplicativo de entrega de comida, e descreva brevemente suas funcionalidades principais. Em seguida, utilize os prompts fornecidos para consultar o chatGPT sobre a stack ideal para o projeto, tanto em uma abordagem geral quanto focada em JavaScript. Analise as sugestões e determine qual stack você utilizaria, justificando sua escolha.
+
+Conclusão:
+
+Dominar a definição de uma stack tecnológica é essencial para o desenvolvimento de projetos de software. Nesta aula, aprendemos como analisar as necessidades de um projeto para escolher as tecnologias mais adequadas, seja numa abordagem geral ou com foco em JavaScript. Essa habilidade permite ao desenvolvedor criar aplicações mais robustas, eficientes e escaláveis, alinhadas às demandas atuais do mercado e às suas próprias competências técnicas.

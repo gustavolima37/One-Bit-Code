@@ -1,0 +1,45 @@
+Objetivo da Aula:
+
+Nesta aula, você aprenderá a usar o chatGPT para realizar um brainstorming de projetos de software, desde a identificação de problemas comuns até a concepção de soluções viáveis na forma de softwares ou micro SaaS (Software as a Service). O objetivo é capacitar você a explorar a capacidade do chatGPT de gerar ideias criativas e práticas, orientando-o a pensar fora da caixa e identificar oportunidades de mercado relevantes.
+
+1. Abrindo o leque de ideias:
+
+Para começar, vamos ampliar nossa visão sobre os desafios cotidianos que as pessoas enfrentam e que poderiam ser resolvidos ou amenizados por meio de software. Use o chatGPT para ajudar nessa tarefa seguindo estes prompts:
+
+Prompt:
+
+"Cite 10 problemas que as pessoas possuem e que elas pagariam um software para resolver."
+
+Prompt alternativo:
+
+"Cite 10 problemas que as pessoas enfrentam que poderia ser suavizados através de um micro SaaS."
+
+Esses prompts vão ajudar você a pensar em uma ampla variedade de problemas, desde os mais comuns e cotidianos até os mais nichados e específicos.
+
+2. Se aprofundando em uma ideia:
+
+Escolha um dos problemas listados que mais chame sua atenção ou que você acredite ter um potencial de mercado significativo. Aprofunde-se neste problema com o seguinte prompt:
+
+Prompt:
+
+"Explique mais detalhadamente o problema X (substitua X pelo problema escolhido) e de quais formas um software poderia ser útil."
+
+Este passo é crucial para entender as nuances do problema e começar a visualizar possíveis soluções.
+
+3. Gerando as ideias de projeto:
+
+Agora, com um entendimento claro do problema, é hora de gerar ideias de solução. Use o chatGPT para obter sugestões de software ou micro SaaS que poderiam resolver o problema identificado:
+
+Prompt:
+
+"Cite 10 softwares (ou micro SaaS) que eu poderia criar para resolver o problema X (substitua X pelo problema escolhido) e que as pessoas pagariam por ele."
+
+Este passo é essencial para transformar o problema em oportunidades de negócios, identificando diversas soluções possíveis.
+
+Exercício prático
+
+Faça o exato passo a passo da aula mas focado em um novo Problema citado por ele.
+
+Conclusão
+
+Nesta aula, aprendemos como usar o chatGPT para fazer um brainstorming eficaz de projetos de software, começando pela identificação de problemas comuns até a geração de ideias para soluções inovadoras. Esse processo não apenas ajuda a ampliar nossa visão sobre as possíveis necessidades do mercado mas também estimula a criatividade e a inovação, capacitando-nos a criar soluções relevantes e viáveis.

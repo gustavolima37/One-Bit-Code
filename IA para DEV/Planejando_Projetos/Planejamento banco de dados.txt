@@ -1,0 +1,27 @@
+Planejamento do Banco de Dados
+
+Objetivo da Aula:
+
+O foco desta aula é te guiar na elaboração de um planejamento eficiente para a estrutura de banco de dados de seus projetos de software. Utilizando a descrição do projeto, suas funcionalidades e as telas planejadas, os alunos aprenderão a definir tabelas e campos, considerando os tipos de dados mais adequados.
+
+Esta habilidade é fundamental para garantir que o banco de dados suporte as operações necessárias de forma eficiente, promovendo escalabilidade e facilitando a manutenção do sistema.
+
+1. Definindo as tabelas e campos:
+
+O planejamento de um banco de dados começa com a compreensão clara do projeto e a definição precisa das tabelas e campos necessários.
+
+1.1. Preparação para o Prompt: Antes de prosseguir, certifique-se de que você tem clareza sobre a descrição do seu projeto (X), as funcionalidades que ele oferecerá (Y) e como as telas serão organizadas (Z). Essas informações são essenciais para definir como o banco de dados será estruturado.
+
+1.2. Prompt: Com as informações do seu projeto em mãos, você está pronto para solicitar ao chatGPT um plano detalhado para a estrutura do banco de dados. Use o seguinte prompt:
+
+"Agindo como um DBA e dado o projeto descrito com sua descrição [X], features [Y] e telas [Z], descreva como seria a estrutura de banco de dados (tabelas e campos com seus tipos) deste projeto detalhadamente.
+
+Escreva o nome das tabelas e campos em inglês, mas mantenha a descrição em português"
+
+Exercício Prático:
+
+Utilizando um projeto fictício de sua escolha, elabore uma descrição detalhada incluindo a descrição do projeto, suas funcionalidades e as telas planejadas. Em seguida, execute o prompt fornecido no chatGPT para gerar um plano de banco de dados. Analise a estrutura sugerida e reflita sobre como ela atende às necessidades do seu projeto.
+
+Conclusão:
+
+O planejamento detalhado da estrutura de banco de dados é um passo crucial no desenvolvimento de software, garantindo que o sistema seja capaz de armazenar, recuperar, atualizar e manipular dados eficientemente. Esta aula forneceu um guia para utilizar o chatGPT na criação de um plano de banco de dados, reforçando a importância de um planejamento cuidadoso para o sucesso do projeto.

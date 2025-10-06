@@ -1,0 +1,55 @@
+Elaboração da Ideia Geral do Projeto
+------------------------------
+Objetivo da Aula:
+
+Esta aula tem como objetivo orientá-lo na elaboração da ideia geral do seu projeto de software, partindo da definição de diferenciais que o destacam no mercado até a consolidação de um MVP (Produto Mínimo Viável).
+
+Você aprenderá a filtrar e priorizar features, ajustar sua proposta conforme necessário, e finalmente, redigir um texto coeso que resuma o valor e a proposta única do seu projeto. Essa habilidade é crucial para apresentar sua ideia a investidores e para a estratégia inicial de desenvolvimento.
+
+
+
+1. Pensando os diferenciais do nosso Projeto:
+
+Inicie definindo o que torna seu projeto único. Utilize o prompt a seguir, substituindo "Ideia Z" pelo nome do seu projeto e "X" pela quantidade de programadores em sua equipe:
+
+Prompt:
+
+"Dado o seguinte projeto de software 'Ideia Z', quais diferenciais (features) deveríamos incluir nele para que ele tenha mais chance de ter sucesso no mercado? Lembrando, somos uma equipe enxuta com X programadores."
+
+
+2. Filtrando para um MVP:
+
+Com base nas sugestões recebidas, selecione as características mais críticas que comporão seu MVP. O objetivo é concentrar-se em funcionalidades que trazem o maior valor com o menor esforço de implementação inicial:
+
+Prompt:
+
+"Filtre a lista de diferenciais que deveríamos ter no nosso MVP."
+
+
+Analise criticamente as respostas da IA, eliminando o que for desnecessário e adicionando outras features que considerar essenciais. Consolide a lista final de características do MVP.
+
+3. Juntando tudo em um texto coerente:
+
+Agora, crie um texto detalhado sobre seu projeto, incorporando a ideia central, as funcionalidades selecionadas para o MVP, os problemas que ele resolve, e seu valor de mercado. Esse texto deve ser convincente e claro, apto para ser utilizado em uma apresentação a potenciais investidores:
+
+Prompt:
+
+"Seguindo a ideia de projeto de software e features descrita, crie um texto expandido que deixe claro o objetivo do software, as features dele, quais problemas ele resolve e por que ele é valioso."
+
+
+4. Ajustando a ideia:
+
+Por fim, refine sua ideia inicial incorporando feedbacks ou novas insights. Se uma nova feature "X" foi identificada como crucial, reescreva seu texto incluindo esta característica, assegurando que a proposta permaneça coesa e alinhada com a visão do projeto:
+
+Prompt:
+
+"Reescreva incluindo a seguinte feature: X."
+
+
+Exercício prático
+
+Escolha um projeto de software hipotético ou um que esteja planejando desenvolver. Aplique os passos desta aula para elaborar a ideia geral do projeto, desde a definição de diferenciais até a criação de um texto preparado para apresentação a investidores. Certifique-se de ajustar a proposta conforme necessário, incluindo todas as features consideradas essenciais.
+
+Conclusão
+
+Nesta aula, aprendemos a metodologia para elaborar a ideia geral de um projeto de software, destacando a importância de definir diferenciais claros, filtrar funcionalidades para um MVP eficaz, e consolidar todas essas informações em um texto coeso e persuasivo. Essas habilidades são fundamentais não só para a fase de concepção do projeto, mas também para a comunicação eficaz da sua visão a stakeholders e potenciais investidores.

@@ -1,0 +1,21 @@
+Neste módulo você vai aprender como planejar seus projetos 10x mais rápido usando o chatGPT de forma inteligente seguindo nosso passo a passo de planejamento:
+
+1- Brainstorming de Projetos com IA: Exploraremos como usar a IA para gerar e refinar ideias inovadoras para projetos.
+
+2- Elaboração da Ideia Geral do Projeto: Definiremos o escopo e as features do projeto.
+
+3- Definição da marca: Criaremos a identidade do projeto, definindo sua missão, visão, e valores para se destacar no mercado.
+
+4- Criação da paleta de cores + Logo: Escolheremos cores e desenharemos um logo que representem visualmente a identidade da marca.
+
+5- Definição da Stack: Selecionaremos as tecnologias e ferramentas mais adequadas para construir o projeto de forma eficiente.
+
+6- Descrição de Telas e Features: Definiremos as telas e seus elementos detalhadamente.
+
+7- Planejamento do Banco de Dados: Estruturaremos o banco de dados (tabelas e campos).
+
+8- Planejamento dos Endpoints: Definiremos os endpoints que vão conectar nosso backend e frontend.
+
+9- Criação da estrutura de arquivos: Vamos criar toda a estrutura de pastas e documentos de um projeto e um prompt para gerar eles no console.
+
+10- Roteiro de desenvolvimento com IA: Vamos listar cronologicamente todas as tasks que tem que ser feitas para criar o software e destacar a dificuldade de cada uma.

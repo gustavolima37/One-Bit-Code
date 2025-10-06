@@ -1,0 +1,27 @@
+🧱 Aula: Criando uma tabela no SQLite com Python:
+
+- Conectar ao banco de dados:
+
+- Usou sqlite3.connect('title.db') para abrir (ou criar) o arquivo do banco de dados chamado title.db.
+
+- Criar um cursor:
+
+- O cursor é como um “ponteiro” que permite executar comandos SQL e navegar pelos dados.
+
+- Criar uma tabela chamada movies:
+
+- A tabela tem 4 colunas:
+
+- id: número inteiro, chave primária, gerado automaticamente.
+
+- name: nome do filme (texto).
+
+- year: ano de lançamento (inteiro).
+
+- score: nota do filme (número decimal).
+
+- Fechar a conexão:
+
+- Depois de criar a tabela, você fechou a conexão com connection.close().
+
+💡 Resultado: Agora você tem um banco de dados com uma tabela pronta para armazenar informações sobre filmes

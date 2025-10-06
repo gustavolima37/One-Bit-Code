@@ -1,0 +1,11 @@
+🧠 Nesta aula 1:
+
+- SQLite com Python: Você usou o módulo sqlite3, que permite criar e manipular bancos de dados SQLite diretamente com Python.
+
+- Banco de dados em arquivo: Ao usar SQLite, o banco de dados é salvo em um arquivo .db — no caso, chamado title.db.
+
+- Criando conexão: A linha sqlite3.connect('title.db') cria o arquivo e abre uma conexão com ele.
+
+- Verificando alterações: connection.total_changes mostra quantas modificações foram feitas no banco desde que a conexão foi aberta.
+
+👉 Essa aula é uma introdução simples à criação de bancos de dados locais com SQLite.

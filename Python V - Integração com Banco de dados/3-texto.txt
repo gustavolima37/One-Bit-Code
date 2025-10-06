@@ -1,0 +1,21 @@
+🎬 Aula: Inserindo dados na tabela do banco de dados:
+
+- Conectar ao banco de dados title.db com sqlite3.connect.
+
+- Criar um cursor para executar comandos SQL.
+
+- Inserir registros na tabela movies:
+
+- Adicionou três filmes com nome, ano e nota:
+
+- Super Mario Bros (2023, nota 10)
+
+- Avatar (2023, nota 9.5)
+
+- Velozes & Furiosos 10 (2023, nota 8.0)
+
+- Salvar as alterações com connection.commit() — isso grava os dados no arquivo .db.
+
+- Fechar a conexão com connection.close().
+
+💡 Resultado: Agora sua tabela movies tem três registros salvos com sucesso

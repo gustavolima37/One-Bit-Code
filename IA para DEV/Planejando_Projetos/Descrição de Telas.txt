@@ -1,0 +1,26 @@
+Descrição de Telas e Features
+
+Objetivo da Aula:
+
+Nesta aula, você vai aprender a mapear e descrever as telas e os elementos que compõem a interface de um projeto de software usando a IA. Este processo é fundamental para o planejamento de desenvolvimento, ajudando a visualizar como as funcionalidades propostas serão apresentadas ao usuário e como elas interagem entre si.
+
+O objetivo é fornecer uma base sólida para a criação de wireframes e protótipos, facilitando a implementação e garantindo que o produto final atenda às necessidades dos usuários.
+
+1. Definindo as telas e elementos da tela:
+
+A definição clara das telas e elementos é um passo crucial para transformar as ideias e funcionalidades de um projeto em uma aplicação funcional e intuitiva.
+
+Prompt:
+
+"Agindo como um arquiteto de software e dado o projeto descrito com 'X' e suas features 'Y', descreva quais telas esse projeto poderia ter e quais elementos estariam em cada tela. Seja detalhista."
+
+
+Agora peça ajustes até que a definição fique como imaginou.
+
+Exercício Prático:
+
+Imagine um projeto chamado "HealthTracker", um aplicativo para monitoramento de saúde e atividade física. Este aplicativo permite aos usuários registrar exercícios, acompanhar a ingestão de água, monitorar o sono e visualizar progressos através de gráficos. Descreva o projeto e suas features e peça a IA que gere o plano de telas e elementos delas.
+
+Conclusão:
+
+A capacidade de detalhar as telas e elementos de um projeto é essencial para o processo de design e desenvolvimento de software. Essa prática não só facilita a comunicação entre os membros da equipe e com os stakeholders, mas também ajuda a garantir que todas as funcionalidades planejadas sejam implementadas de maneira eficaz e intuitiva.
