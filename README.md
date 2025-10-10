@@ -1,65 +1,95 @@
 ### **`README.md`**
 
-# 🐍 Curso de Python - OneBitCode
+# 🧠 Formação em Python e Inteligência Artificial
 
-Este repositório contém os projetos, exercícios e anotações que estou desenvolvendo durante a **Formação Python da OneBitCode**. O curso oferece uma abordagem prática, ensinando desde os fundamentos da linguagem até tópicos mais avançados, como desenvolvimento web, análise de dados e automações.
+Este repositório é um diário de aprendizado que reúne os projetos, exercícios e anotações que estou desenvolvendo durante minha formação em **Python** pela [OneBitCode](https://onebitcode.com) e em **Inteligência Artificial**, com certificações já conquistadas em ambas as áreas. O foco é prático e voltado para aplicações reais, incluindo desenvolvimento web, análise de dados, automações e IA aplicada.
 
------
+---
 
-## 📚 Conteúdo do Curso
+## 📚 Trilhas de Conhecimento
 
-A formação é dividida em trilhas de conhecimento, abordando as principais áreas de aplicação da linguagem Python.
+### 🐍 Curso de Python – OneBitCode
 
-### Módulo de Fundamentos (Atualmente estudando...)
+**Status:** Em andamento  
+**Certificado:** ✅ Módulos concluídos com certificação
 
-  - **Lógica de Programação:** Estruturas de controle, laços de repetição e conceitos básicos.
-  - **Estruturas de Dados:** Uso de listas, tuplas, dicionários e conjuntos.
-  - **Funções e Métodos:** Criação e uso de funções para modularizar o código.
-  - **Programação Orientada a Objetos (POO):** Classes, objetos, herança, encapsulamento e polimorfismo.
+**Conteúdo:**
 
-### Módulo de Automações (em breve)
+#### Módulo de Fundamentos (Estudando)
+- Lógica de Programação: Estruturas de controle, laços e conceitos básicos  
+- Estruturas de Dados: Listas, tuplas, dicionários e conjuntos  
+- Funções e Métodos: Modularização de código  
+- Programação Orientada a Objetos (POO): Classes, herança, encapsulamento e polimorfismo
+- Manipulação de Arquivos (TXT, CSV)
+- Python e Banco de dados (SQLite e PostgreSQL)
 
-  - **Integração com APIs:** Consumo e criação de APIs para interagir com serviços externos.
-  - **Automação Web:** Uso de bibliotecas como Selenium ou Playwright para automatizar tarefas em navegadores.
-  - **Manipulação de Arquivos:** Leitura e escrita de arquivos de diferentes formatos (TXT, CSV, JSON, etc.).
+#### Módulo de Automações (em breve)
+- Integração com APIs  
+- Automação Web com Selenium ou Playwright  
+- Manipulação de Arquivos (TXT, CSV, JSON)  
 
-### Módulo de Desenvolvimento Web (em breve)
+#### Módulo de Desenvolvimento Web (em breve)
+- Flask/Django  
+- Templates e Rotas  
+- Banco de Dados  
 
-  - **Flask/Django:** Construção de aplicações web robustas e escaláveis usando frameworks populares.
-  - **Templates e Rotas:** Criação de páginas dinâmicas e gerenciamento de URLs.
-  - **Banco de Dados:** Conexão e manipulação de bancos de dados para armazenar informações.
+#### Módulo de Análise de Dados (em breve)
+- Pandas  
+- Visualização com Matplotlib e Seaborn  
+- Estatística aplicada  
 
-### Módulo de Análise de Dados (em breve)
+---
 
-  - **Manipulação de Dados:** Uso de Pandas para carregar, limpar e transformar dados.
-  - **Visualização de Dados:** Geração de gráficos e visualizações com Matplotlib ou Seaborn.
-  - **Análise Estatística:** Aplicação de conceitos estatísticos para extrair *insights* dos dados.
+### 🤖 Curso de Inteligência Artificial – Formação Certificada
 
------
+**Status:** Em andamento  
+**Certificados conquistados:**
+- ✅ Entendendo as IAs  
+- ✅ Dominando o ChatGPT  
+- ✅ Estudando 10x Melhor  
+- ✅ Planejando seus Projetos  
+
+**Tópicos em breve:**
+- 🔜 Programando 10x com ChatGPT  
+- 🔜 Gerando Assets com IA  
+- 🔜 Dominando o Copilot  
+
+**Conteúdo abordado:**
+- Fundamentos da IA e suas aplicações práticas  
+- Uso estratégico do ChatGPT para produtividade, estudo e planejamento  
+- Técnicas para acelerar o aprendizado com IA  
+- Estruturação de projetos com apoio de ferramentas inteligentes  
+- Geração de conteúdo visual e textual com IA  
+- Programação assistida por IA (Copilot e ChatGPT)  
+
+---
 
 ## 💻 Projetos Desenvolvidos
 
-Aqui estão alguns dos projetos práticos que estou construindo ao longo do curso. Cada pasta corresponde a um projeto específico com seu próprio `README.md` e instruções de uso.
+Cada pasta neste repositório contém um projeto prático com seu próprio `README.md` explicando o funcionamento e instruções de uso.
 
-  #Em Construção
+**Status:** Em construção 🚧
 
------
+---
 
 ## 🛠️ Tecnologias e Ferramentas
 
-  - **Python**
-  - **Git e GitHub** (Para controle de versão e colaboração)
-  - **Visual Studio Code** (Meu editor de código preferido)
+- Python  
+- Git e GitHub  
+- Visual Studio Code    
+- ChatGPT e Copilot (IA assistiva)  
 
------
+---
 
 ## 🤝 Conecte-se comigo
 
-Sinta-se à vontade para entrar em contato ou dar uma estrela neste repositório\!
+Sinta-se à vontade para entrar em contato ou dar uma estrela neste repositório!
 
-  - **LinkedIn:** https://www.linkedin.com/in/gustavo-lima-1a0b63241/
-  - **Email:** bandu018@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/gustavo-lima-1a0b63241/)  
+- 📧 E-mail: bandu018@gmail.com  
 
------
+---
 
+Este repositório está em constante evolução. Ele reflete meu progresso pessoal e profissional nas áreas de Python e Inteligência Artificial, com foco em aprendizado contínuo, projetos práticos e uso estratégico de ferramentas inteligentes.
 *Este repositório é um diário de aprendizado e está em constante atualização. As informações aqui refletem o conteúdo do curso e meu progresso pessoal.*
+
