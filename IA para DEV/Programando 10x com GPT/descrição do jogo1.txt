@@ -1,0 +1,85 @@
+---
+
+# 🎮 Jogo de Adivinhação com Python + Copilot
+
+Este mini projeto demonstra como utilizar **Inteligência Artificial assistiva** com o **Copilot da Microsoft** para acelerar o desenvolvimento de software. O objetivo é criar um jogo simples de adivinhação em **Python puro**, executado no terminal, com suporte da IA para geração e refatoração de código.
+
+---
+
+## 📌 Descrição do Projeto
+
+Neste jogo, o computador escolhe aleatoriamente um número entre 0 e 100, e o jogador deve tentar adivinhar qual é. A cada tentativa, o programa informa se o palpite foi **muito alto**, **muito baixo** ou **correto**. O jogo continua até o jogador acertar, e ao final, exibe o número total de tentativas.
+
+Este projeto foi desenvolvido com o apoio do **Copilot**, que auxiliou na geração do código base, estruturação lógica e sugestões de melhorias — demonstrando como ferramentas de IA podem ser integradas ao fluxo de trabalho de um desenvolvedor.
+
+---
+
+## 🧠 Tecnologias Utilizadas
+
+- **Python 3.x**  
+- **Copilot (IA assistiva)**  
+- **Terminal / Console**  
+
+---
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/jogo-adivinhacao-python-copilot.git
+   ```
+
+2. Acesse a pasta do projeto:
+   ```bash
+   cd jogo-adivinhacao-python-copilot
+   ```
+
+3. Execute o jogo:
+   ```bash
+   python jogo_adivinhacao.py
+   ```
+
+4. Ou copie e cole o codigo no seu terminal (vscode)
+
+---
+
+## 🧪 Funcionalidades
+
+- Geração de número aleatório entre 0 e 100  
+- Entrada de dados via `input()`  
+- Feedback interativo sobre o palpite  
+- Contador de tentativas  
+- Tratamento de erros para entradas inválidas  
+
+---
+
+## 🎯 Aprendizados
+
+- Como estruturar um jogo simples em Python  
+- Como usar IA assistiva (Copilot) para gerar e refatorar código  
+- Como testar e personalizar funcionalidades com base em requisitos definidos  
+- Como documentar e publicar um projeto no GitHub  
+
+---
+
+## 💡 Sugestões de Expansão
+
+- Permitir que o jogador defina a faixa de números  
+- Adicionar mensagens motivacionais ou sons  
+- Criar uma versão com interface gráfica usando Tkinter  
+- Integrar com IA para gerar testes automatizados ou documentação do código  
+
+---
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias. Este projeto é parte de minha formação em **Python e Inteligência Artificial**, e está em constante evolução.
+
+---
+
+## 📬 Contato
+
+- [LinkedIn](https://www.linkedin.com/in/gustavo-lima-1a0b63241/)  
+- E-mail: bandu018@gmail.com  
+
+---

@@ -1,0 +1,117 @@
+```
+===========================================
+🧼 Refatorando seu Código em Python
+===========================================
+
+🎯 Objetivo da Aula:
+
+Esta aula tem como objetivo demonstrar o processo de refatoração de um código Python existente, com o intuito de melhorar sua legibilidade, manutenibilidade e expandir sua funcionalidade.
+
+Partindo de um código base de um jogo de adivinhação, você aprenderá a implementar melhorias incrementais que tornarão o código mais limpo, modular e profissional.
+
+-------------------------------------------
+📚 Conteúdo da Aula
+-------------------------------------------
+
+🔍 Analisando a Qualidade do Código:
+
+Inicialmente, temos um simples jogo de adivinhação codificado em Python. Este jogo gera um número aleatório entre 0 e 100 e desafia o jogador a adivinhá-lo, contabilizando o número de tentativas.
+
+Código base:
+
+```python
+import random
+
+def jogo_adivinhacao():
+    # Gera um número aleatório entre 0 e 100
+    numero_secreto = random.randint(0, 100)
+    tentativas = 0
+    acertou = False
+
+    print("🎯 Bem-vindo ao Jogo de Adivinhação!")
+    print("Tente adivinhar o número entre 0 e 100.\n")
+
+    # Loop até o jogador acertar
+    while not acertou:
+        try:
+            palpite = int(input("Digite seu palpite: "))
+            tentativas += 1
+
+            if palpite < numero_secreto:
+                print("🔻 Muito baixo. Tente novamente.\n")
+            elif palpite > numero_secreto:
+                print("🔺 Muito alto. Tente novamente.\n")
+            else:
+                print(f"✅ Parabéns! Você acertou o número {numero_secreto} em {tentativas} tentativas.")
+                acertou = True
+        except ValueError:
+            print("⚠️ Entrada inválida. Por favor, digite um número inteiro.\n")
+
+# Executa o jogo
+jogo_adivinhacao()
+```
+
+-------------------------------------------
+🔧 Refatorações Solicitadas
+-------------------------------------------
+
+1. **Permitir Reinício do Jogo**
+
+Prompt:
+```python
+Modificar o jogo para permitir que o usuário opte por reiniciar após concluir uma partida.
+```
+
+2. **Adicionar Opções de Dificuldade**
+
+Prompt:
+```python
+Incluir níveis de dificuldade (Fácil, Médio, Difícil) que alterem a faixa de números do jogo.
+```
+
+3. **Tradução para Inglês**
+
+Prompt:
+```python
+Melhorar a internacionalização do código ao traduzir variáveis e funções para inglês, mantendo os textos exibidos ao usuário em português.
+```
+
+4. **Modularização do Código**
+
+Prompt:
+```python
+Tornar o código mais modular, dividindo-o em funções menores e específicas, facilitando a manutenção e compreensão.
+```
+
+5. **Adesão aos Style Guides**
+
+Prompt:
+```python
+Ajustar o código conforme os melhores style guides de Python (PEP 8), para garantir boas práticas de codificação.
+```
+
+-------------------------------------------
+🧪 Exercício Prático
+-------------------------------------------
+
+Após cada etapa de refatoração:
+
+- Revise o código para identificar as mudanças feitas.
+- Compreenda os motivos por trás de cada melhoria.
+- Tente aplicar essas refatorações em um código de sua própria autoria.
+- Observe as melhorias na legibilidade e manutenibilidade.
+
+-------------------------------------------
+✅ Conclusão
+-------------------------------------------
+
+A refatoração é uma etapa crucial no desenvolvimento de software, contribuindo significativamente para a qualidade do código.
+
+Ao aplicar as melhorias sugeridas, transformamos nosso simples jogo de adivinhação em um código mais limpo, modular e alinhado com as melhores práticas.
+
+Este processo facilita futuras modificações e expansões, tornando o código mais acessível para outros desenvolvedores.
+
+Continue praticando a refatoração em seus projetos para aprimorar constantemente suas habilidades de programação.
+```
+
+---

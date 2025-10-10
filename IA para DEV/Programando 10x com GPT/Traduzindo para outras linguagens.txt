@@ -1,0 +1,132 @@
+```
+===========================================
+🌐 Traduzindo Códigos entre Linguagens
+===========================================
+
+🎯 Objetivo da Aula:
+
+Nesta aula, você aprenderá a utilizar ferramentas de IA assistiva (como o Copilot) para traduzir um código de um jogo simples de adivinhação de **Python para JavaScript**.
+
+Este processo expande seu conhecimento em linguagens de programação e mostra como a inteligência artificial pode auxiliar na transição entre diferentes tecnologias.
+
+-------------------------------------------
+📚 Conteúdo da Aula
+-------------------------------------------
+
+🔹 Passo 1: Entendendo o Código Original em Python
+
+O jogo original foi desenvolvido em Python e possui as seguintes funcionalidades:
+
+- Gera um número aleatório entre 0 e 100
+- Solicita ao jogador que insira um palpite via `input()`
+- Informa se o palpite está alto, baixo ou correto
+- Conta o número de tentativas
+- Permite reiniciar o jogo
+- Oferece níveis de dificuldade (fácil, médio, difícil)
+- Utiliza boas práticas de modularização e estilo (PEP 8)
+
+🔹 Passo 2: Traduzindo o Código para JavaScript com IA
+
+Após compreender o funcionamento do código Python, utilizamos o Copilot para gerar uma versão equivalente em JavaScript.
+
+Prompt utilizado:
+
+"Copilot, traduza o seguinte jogo de adivinhação de Python para JavaScript. O jogo deve gerar um número aleatório entre 0 e 100, permitir que o jogador insira palpites via prompt(), oferecer níveis de dificuldade, contar tentativas e permitir reiniciar o jogo. Mantenha a lógica e funcionalidade do original, adaptando para sintaxe JavaScript."
+
+🔹 Código Traduzido para JavaScript:
+
+```javascript
+const chooseDifficulty = () => {
+  const difficulty = prompt('Escolha a dificuldade: fácil, médio ou difícil.');
+  switch (difficulty.toLowerCase()) {
+    case 'fácil':
+      return 10;
+    case 'médio':
+      return 5;
+    case 'difícil':
+      return 3;
+    default:
+      alert('Dificuldade não reconhecida. Configurando para "fácil".');
+      return 10;
+  }
+};
+
+const isValidGuess = (guess) => {
+  const number = parseInt(guess, 10);
+  return !isNaN(number) && number >= 0 && number <= 100;
+};
+
+const processGuess = (guessNumber, secretNumber, attempts, maxAttempts) => {
+  if (guessNumber < secretNumber) {
+    alert('Baixo. Tente um número maior.');
+  } else if (guessNumber > secretNumber) {
+    alert('Alto. Tente um número menor.');
+  } else {
+    alert(`Correto! O número é ${secretNumber}. Você acertou em ${attempts} tentativas.`);
+    return true;
+  }
+
+  if (attempts === maxAttempts) {
+    alert(`Suas tentativas acabaram! O número era ${secretNumber}.`);
+  }
+
+  return false;
+};
+
+const askPlayAgain = () => confirm('Você deseja jogar novamente?');
+
+const playGame = () => {
+  const maxAttempts = chooseDifficulty();
+  const secretNumber = Math.floor(Math.random() * 101);
+  let attempts = 0;
+  let isCorrect = false;
+
+  while (!isCorrect && attempts < maxAttempts) {
+    const guess = prompt(`Digite um número entre 0 e 100. Tentativa ${attempts + 1} de ${maxAttempts}:`);
+    attempts += 1;
+
+    if (isValidGuess(guess)) {
+      const guessNumber = parseInt(guess, 10);
+      isCorrect = processGuess(guessNumber, secretNumber, attempts, maxAttempts);
+    } else {
+      alert('Por favor, insira um número válido entre 0 e 100.');
+    }
+  }
+
+  if (askPlayAgain()) {
+    playGame();
+  }
+};
+
+playGame();
+```
+
+🔹 Passo 3: Verificando e Testando o Código JavaScript
+
+Teste o jogo em um ambiente JavaScript, como o console do navegador ou sites como:
+
+- https://jsfiddle.net  
+- https://codepen.io  
+- Ferramenta DevTools do navegador (F12 → Console)
+
+Verifique se o jogo funciona conforme esperado, com feedback correto e contagem de tentativas.
+
+-------------------------------------------
+🧪 Exercício Prático
+-------------------------------------------
+
+- Compare o código original em Python com a versão em JavaScript
+- Identifique as diferenças de sintaxe e estrutura
+- Teste ambos os jogos e observe se o comportamento é equivalente
+- Tente traduzir outros scripts simples entre linguagens
+
+-------------------------------------------
+✅ Conclusão
+-------------------------------------------
+
+A habilidade de traduzir códigos entre diferentes linguagens é extremamente valiosa em ambientes de desenvolvimento modernos.
+
+Com o apoio de IA assistiva como o Copilot, esse processo se torna mais rápido, preciso e didático.
+
+Esta aula exemplifica como ferramentas inteligentes podem expandir suas capacidades técnicas e acelerar seu aprendizado em múltiplas linguagens de programação.
+```

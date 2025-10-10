@@ -1,0 +1,70 @@
+========================================
+🎮 Aula: Criando seu Primeiro Código com IA
+========================================
+
+📌 Objetivo da Aula:
+
+Nesta aula, você aprenderá a criar um jogo de adivinhação em JavaScript que será executado diretamente no console do navegador.
+
+O foco é mostrar como o ChatGPT pode auxiliar no desenvolvimento de código, especificamente ao gerar um script baseado em requisitos definidos.
+
+Ao final, você terá um jogo interativo onde o jogador tenta adivinhar um número aleatório entre 0 e 100.
+
+----------------------------------------
+📚 Conteúdo da Aula
+----------------------------------------
+
+1. Definindo os Requisitos do Jogo
+
+Nosso jogo deve:
+
+- Gerar um número aleatório entre 0 e 100  
+- Solicitar ao jogador para inserir um palpite através da função prompt()  
+- Informar se o palpite foi alto, baixo ou correto diretamente no prompt()  
+- Continuar solicitando palpites até que o jogador acerte o número  
+- Ao acertar, informar o número de tentativas necessárias  
+
+---
+
+2. Solicitando o Código ao ChatGPT
+
+Com os requisitos definidos, peça ao ChatGPT o código necessário. Exemplo de prompt:
+
+"ChatGPT, preciso de um código em JavaScript puro para um jogo que será executado diretamente no console do navegador. Deve gerar um número aleatório entre 0 e 100, usar prompt() para coletar um palpite do jogador, comparar esse palpite com o número gerado e informar no prompt() se é alto, baixo ou correto. O jogo continua até o acerto e, no final, mostra o número de tentativas. Por favor, todo o código deve ser em JavaScript puro, sem HTML."
+
+---
+
+3. Testando o Jogo
+
+Com o código fornecido pelo ChatGPT, teste o jogo no console JavaScript do seu navegador.
+
+Tente adivinhar o número e veja se o jogo funciona como esperado.
+
+---
+
+4. Ajustes e Personalização
+
+Após testar o jogo básico, considere personalizações como:
+
+- Variações no feedback para palpites  
+- Alterar a faixa de números (ex: 0 a 500)  
+- Adicionar uma mensagem de boas-vindas  
+- Permitir que o jogador escolha a faixa de números  
+
+---
+
+🧪 Exercício Prático
+
+Implemente o jogo de adivinhação seguindo os passos desta aula.
+
+Depois, adicione ao menos uma funcionalidade extra para tornar o jogo mais interessante.
+
+---
+
+✅ Conclusão
+
+Criar um jogo de adivinhação em JavaScript com o suporte do ChatGPT demonstra a eficácia de ferramentas de IA no desenvolvimento de software.
+
+Além de ser uma maneira divertida de praticar programação, este exercício mostra como a IA pode facilitar e acelerar o processo de codificação.
+
+Experimente modificar e expandir o jogo com novas ideias, e veja até onde sua criatividade pode levá-lo!

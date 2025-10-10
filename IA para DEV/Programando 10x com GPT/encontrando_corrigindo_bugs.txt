@@ -1,0 +1,54 @@
+```
+===========================================
+🐞 Encontrando e Corrigindo Bugs
+===========================================
+
+🎯 Objetivo da Aula:
+
+Aprender a identificar e corrigir bugs em um código JavaScript com o auxílio de IA assistiva. O exemplo usado é um jogo de adivinhação que apresenta um erro de validação numérica.
+
+-------------------------------------------
+📚 Conteúdo da Aula
+-------------------------------------------
+
+🔹 Análise do Código Original:
+
+O jogo permite ao usuário escolher uma dificuldade, tentar adivinhar um número secreto e decidir se quer jogar novamente. Um bug foi identificado na função `isValidGuess`.
+
+🔹 Bug Identificado:
+
+Uso incorreto da função `isNa()` — que não existe em JavaScript. A função correta é `isNaN()`.
+
+🔹 Correção Aplicada:
+
+Substituir `isNa(number)` por `isNaN(number)` para validar corretamente se o input é um número.
+
+🔹 Trecho Corrigido:
+
+```javascript
+const isValidGuess = (guess) => {
+  const number = parseInt(guess, 10);
+  return !isNaN(number) && number >= 0 && number <= 100;
+};
+```
+
+🔹 Prompt Utilizado:
+
+"Agindo como um programador sênior, encontre possíveis bugs nesse código e faça a sugestão do que deve ser corrigido para resolver isso."
+
+-------------------------------------------
+🧪 Exercício Prático
+-------------------------------------------
+
+- Crie um código com erro intencional
+- Use IA para identificar e corrigir o bug
+- Teste o código corrigido para validar a solução
+
+-------------------------------------------
+✅ Conclusão
+-------------------------------------------
+
+A identificação de bugs é uma habilidade essencial no desenvolvimento de software. Ferramentas como o ChatGPT ou Copilot podem acelerar esse processo, tornando a correção mais eficiente e didática.
+
+Continue praticando com códigos reais e simulados para aprimorar sua capacidade de depuração.
+```

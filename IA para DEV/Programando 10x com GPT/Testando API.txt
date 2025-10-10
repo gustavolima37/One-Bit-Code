@@ -1,0 +1,219 @@
+```
+===========================================
+🧪 Testando uma API com Postman + IA (Python)
+===========================================
+
+🎯 Objetivo da Aula:
+
+Aprender a testar todos os endpoints de uma API desenvolvida com **FastAPI** utilizando o **Postman** e o suporte da **inteligência artificial** para gerar um JSON de importação. Ao final, você será capaz de importar todos os endpoints da API no Postman com os parâmetros corretos, facilitando os testes e validações.
+
+-------------------------------------------
+📚 Conteúdo da Aula
+-------------------------------------------
+
+🔹 Introdução ao Postman
+
+O Postman é uma ferramenta essencial para desenvolvedores que trabalham com APIs. Ele permite:
+
+- Enviar requisições HTTP (GET, POST, PUT, DELETE)
+- Visualizar respostas e status
+- Organizar endpoints em coleções
+- Automatizar testes e validar comportamentos
+
+---
+
+🔹 Passo 1: Configuração Inicial
+
+1. Instale o Postman: [https://www.postman.com/downloads](https://www.postman.com/downloads)  
+2. Crie uma nova coleção chamada **"API de Imóveis"**  
+3. Instale o FastAPI e Uvicorn no seu ambiente Python:
+
+```bash
+pip install fastapi uvicorn
+```
+
+---
+
+🔹 Passo 2: Código da API com FastAPI (comentado)
+
+```python
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List
+from uuid import uuid4
+
+app = FastAPI()
+
+# Modelo de dados do imóvel
+class Property(BaseModel):
+    title: str
+    description: str
+    price: float
+    type: str
+    address: str
+    bedrooms: int
+    bathrooms: int
+    area: float
+
+# Lista mockada
+properties: List[dict] = []
+
+# POST /properties - Criação de imóvel
+@app.post("/properties")
+def create_property(property: Property):
+    new_property = property.dict()
+    new_property["id"] = str(uuid4())  # Gera ID único automaticamente
+    properties.append(new_property)
+    return new_property
+
+# GET /properties - Lista todos os imóveis
+@app.get("/properties")
+def get_properties():
+    return properties
+
+# GET /properties/{property_id} - Busca imóvel por ID
+@app.get("/properties/{property_id}")
+def get_property(property_id: str):
+    for prop in properties:
+        if prop["id"] == property_id:
+            return prop
+    raise HTTPException(status_code=404, detail="Imóvel não encontrado")
+
+# PUT /properties/{property_id} - Atualiza imóvel por ID
+@app.put("/properties/{property_id}")
+def update_property(property_id: str, updated: Property):
+    for index, prop in enumerate(properties):
+        if prop["id"] == property_id:
+            updated_data = updated.dict()
+            updated_data["id"] = property_id  # Mantém o ID original
+            properties[index] = updated_data
+            return updated_data
+    raise HTTPException(status_code=404, detail="Imóvel não encontrado")
+
+# DELETE /properties/{property_id} - Remove imóvel por ID
+@app.delete("/properties/{property_id}")
+def delete_property(property_id: str):
+    for prop in properties:
+        if prop["id"] == property_id:
+            properties.remove(prop)
+            return {"message": "Imóvel removido com sucesso"}
+    raise HTTPException(status_code=404, detail="Imóvel não encontrado")
+```
+
+🟢 Para executar:
+```bash
+uvicorn nome_do_arquivo:app --reload
+```
+(Substitua `nome_do_arquivo` pelo nome real do seu arquivo Python)
+
+🔗 Acesse a documentação interativa gerada automaticamente:
+```
+http://localhost:8000/docs
+```
+
+---
+
+🔹 Passo 3: Gerando o JSON de Importação com IA
+
+🎙️ Prompt utilizado:
+
+> "Gere um JSON de importação para o Postman para uma API FastAPI com os seguintes endpoints: POST /properties, GET /properties, GET /properties/{id}, PUT /properties/{id}, DELETE /properties/{id}. Os campos do imóvel são: title, description, price, type, address, bedrooms, bathrooms, area."
+
+🧾 JSON de Importação (corrigido):
+
+```json
+{
+  "info": {
+    "name": "API de Imóveis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Imóvel",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Casa com jardim\",\n  \"description\": \"Casa espaçosa com jardim e garagem\",\n  \"price\": 450000,\n  \"type\": \"casa\",\n  \"address\": \"Rua das Flores, 123\",\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"area\": 200\n}"
+        },
+        "url": { "raw": "http://localhost:8000/properties", "host": ["localhost"], "port": "8000", "path": ["properties"] }
+      }
+    },
+    {
+      "name": "Listar Imóveis",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/properties", "host": ["localhost"], "port": "8000", "path": ["properties"] }
+      }
+    },
+    {
+      "name": "Buscar Imóvel por ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/properties/{{property_id}}", "host": ["localhost"], "port": "8000", "path": ["properties", "{{property_id}}"] }
+      }
+    },
+    {
+      "name": "Atualizar Imóvel",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Casa reformada\",\n  \"description\": \"Casa com nova pintura e piso\",\n  \"price\": 470000,\n  \"type\": \"casa\",\n  \"address\": \"Rua das Flores, 123\",\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"area\": 200\n}"
+        },
+        "url": { "raw": "http://localhost:8000/properties/{{property_id}}", "host": ["localhost"], "port": "8000", "path": ["properties", "{{property_id}}"] }
+      }
+    },
+    {
+      "name": "Deletar Imóvel",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:8000/properties/{{property_id}}", "host": ["localhost"], "port": "8000", "path": ["properties", "{{property_id}}"] }
+      }
+    }
+  ]
+}
+```
+
+---
+
+🔹 Passo 4: Importando o JSON no Postman
+
+1. No Postman, clique em **Import**  
+2. Selecione **Raw Text**  
+3. Cole o JSON gerado pela IA  
+4. Clique em **Continue** e depois em **Import**
+
+---
+
+🔹 Passo 5: Testando os Endpoints
+
+- **POST**: Crie um novo imóvel com os dados no corpo da requisição  
+- **GET**: Liste todos os imóveis ou consulte um específico por ID  
+- **PUT**: Atualize um imóvel existente informando o ID e os novos dados  
+- **DELETE**: Remova um imóvel informando o ID na URL
+
+---
+
+🧪 Exercício Prático
+
+1. Execute o servidor local com `uvicorn nome_do_arquivo:app --reload`  
+2. Gere ou copie o JSON de importação  
+3. Importe no Postman e teste cada endpoint  
+4. Valide os dados retornados e os status HTTP
+
+---
+
+✅ Conclusão
+
+Você aprendeu a:
+
+- Criar uma API com FastAPI  
+- Implementar operações CRUD com dados mockados  
+- Gerar um JSON de importação com IA para o Postman  
+- Testar todos os endpoints de forma automatizada e eficiente
+
+Essa prática é essencial para desenvolvedores que buscam agilidade, organização e qualidade no desenvolvimento de APIs.
+```
