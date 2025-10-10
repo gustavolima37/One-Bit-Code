@@ -1,0 +1,25 @@
+### 🧾 Objetivo da aula
+Aprender a **ler dados de uma tabela** em um banco de dados SQLite usando Python.
+
+---
+
+### 🛠️ Etapas do código
+
+1. **Conexão com o banco de dados**  
+   `sqlite3.connect('title.db')` abre o banco chamado `title.db`.
+
+2. **Criação do cursor**  
+   O cursor é um objeto que permite executar comandos SQL e navegar pelos resultados.
+
+3. **Leitura dos dados da tabela `movies`**  
+   - Pode-se selecionar colunas específicas (`name`, `year`, `score`) ou todas (`SELECT *`).
+   - `data.fetchall()` retorna todos os registros da consulta.
+
+4. **Iteração sobre os dados**  
+   Um `for` percorre os registros e imprime cada linha.
+
+5. **Ordenação dos dados**  
+   Os filmes são listados em ordem decrescente de `score` usando `ORDER BY score desc`.
+
+6. **Fechamento da conexão**  
+   `connection.close()` encerra a comunicação com o banco.

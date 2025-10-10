@@ -1,0 +1,51 @@
+Ótima observação! Quando você deleta um registro em SQLite, os **IDs não são automaticamente reorganizados**. 
+Isso acontece porque o campo `id` geralmente é definido como `INTEGER PRIMARY KEY AUTOINCREMENT`, e o banco **preserva a sequência** para garantir unicidade.
+
+---
+
+### ⚠️ Por que os IDs ficam assim: 1, 2, 4?
+- O `AUTOINCREMENT` garante que cada novo registro receba um ID **único e crescente**, mesmo que você delete algum.
+- Isso evita conflitos e mantém a integridade dos dados.
+
+---
+
+### 🛠️ Quer reorganizar os IDs? Aqui estão 3 opções:
+
+#### ✅ 1. **Recriar a tabela e reinserir os dados**
+Essa é a forma mais segura de "resetar" os IDs:
+
+```python
+# 1. Criar nova tabela temporária
+cursor.execute("""
+    CREATE TABLE movies_temp (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        year INTEGER,
+        score REAL
+    )
+""")
+
+# 2. Copiar dados da tabela original (sem o campo id)
+cursor.execute("""
+    INSERT INTO movies_temp (name, year, score)
+    SELECT name, year, score FROM movies
+""")
+
+# 3. Apagar a tabela original e renomear a nova
+cursor.execute("DROP TABLE movies")
+cursor.execute("ALTER TABLE movies_temp RENAME TO movies")
+
+connection.commit()
+```
+
+✅ Agora os IDs serão reatribuídos automaticamente e sequencialmente: 1, 2, 3…
+
+---
+
+#### ⚠️ 2. **Atualizar os IDs manualmente**
+Não recomendado, pois pode causar conflitos se o `id` for chave primária ou estiver relacionado a outras tabelas.
+
+---
+
+#### 🧠 3. **Aceitar os IDs como estão**
+Na maioria dos casos, **não é necessário reorganizar os IDs**. O importante é que cada registro tenha um identificador único — a sequência visual não afeta o funcionamento do banco.

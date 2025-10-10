@@ -1,0 +1,37 @@
+Claro! Aqui está a **análise e resumo explicativo** do seu código de forma clara e objetiva:
+
+---
+
+### 🧾 Objetivo da aula
+Aprender a **remover registros** de uma tabela em um banco de dados SQLite usando Python.
+
+---
+
+### 🛠️ Etapas do código explicadas
+
+1. **Conexão com o banco de dados**  
+   `sqlite3.connect('title.db')` abre o banco chamado `title.db`.
+
+2. **Criação do cursor**  
+   O cursor permite executar comandos SQL e navegar pelos dados.
+
+3. **Entrada do usuário**  
+   O programa solicita o `id` do filme que será removido.
+
+4. **Remoção do registro**  
+   O comando `DELETE FROM movies WHERE id = ?` remove o filme com o `id` informado.  
+   ✅ **Importante**: `(id,)` é uma tupla com um único elemento — necessário para evitar erro de sintaxe.
+
+5. **Confirmação da alteração**  
+   `connection.commit()` salva a exclusão no banco.
+
+6. **Fechamento da conexão**  
+   `connection.close()` encerra a comunicação com o banco.
+
+---
+
+### ⚠️ Observação importante
+Mesmo após remover um filme, o campo `id` dos demais registros **não é reorganizado**. Por exemplo, se o filme com `id = 3` for deletado, os IDs podem ficar como `1, 2, 4`.  
+Se quiser reorganizar os IDs, é necessário recriar a tabela e reinserir os dados manualmente.
+
+--- reorganização-tabela.txt  ajuda a explicar.

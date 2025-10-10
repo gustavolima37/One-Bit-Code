@@ -1,0 +1,91 @@
+### 🧩 `WHERE` é uma cláusula SQL usada em bancos de dados
+
+Ela serve para **filtrar registros** — ou seja, indicar **quais linhas** da tabela devem ser afetadas por comandos como:
+
+- `SELECT` → para buscar dados
+- `UPDATE` → para atualizar dados
+- `DELETE` → para remover dados
+
+---
+
+### 🔍 Exemplo prático com `UPDATE`
+
+```sql
+UPDATE movies
+SET name = 'Matrix Reloaded'
+WHERE id = 1
+```
+
+👉 Aqui, apenas o filme com `id = 1` será atualizado.
+
+---
+
+### 🧠 Dica importante
+Você pode combinar condições com:
+- `AND` → todas devem ser verdadeiras
+- `OR` → pelo menos uma deve ser verdadeira
+
+```sql
+WHERE year = 1999 AND score > 8.5
+```
+
+---
+
+Como usar a cláusula `WHERE` com **`LIKE`**, **`IN`**, e **subconsultas** em SQL — tudo isso pode ser usado com Python e SQLite também.
+
+---
+
+### 🔍 1. `WHERE` com `LIKE` — busca por padrões
+
+Usado para encontrar valores **semelhantes**, com curingas:
+
+```sql
+SELECT * FROM movies
+WHERE name LIKE 'Matrix%'
+```
+
+- `%` → representa qualquer sequência de caracteres.
+- `'Matrix%'` → busca filmes cujo nome começa com "Matrix".
+
+📌 Em Python:
+
+```python
+cursor.execute("SELECT * FROM movies WHERE name LIKE ?", ('Matrix%',))
+```
+
+---
+
+### 🧮 2. `WHERE` com `IN` — busca por múltiplos valores
+
+Usado para verificar se um valor está **dentro de uma lista**:
+
+```sql
+SELECT * FROM movies
+WHERE year IN (1999, 2003, 2021)
+```
+
+📌 Em Python:
+
+```python
+cursor.execute("SELECT * FROM movies WHERE year IN (?, ?, ?)", (1999, 2003, 2021))
+```
+
+---
+
+### 🧠 3. `WHERE` com subconsulta — busca baseada em outra consulta
+
+Usado quando você quer filtrar com base em resultados de outra tabela ou consulta:
+
+```sql
+SELECT * FROM movies
+WHERE score = (SELECT MAX(score) FROM movies)
+```
+
+📌 Em Python:
+
+```python
+cursor.execute("""
+    SELECT * FROM movies
+    WHERE score = (SELECT MAX(score) FROM movies)
+""")
+```

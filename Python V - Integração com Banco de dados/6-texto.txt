@@ -1,0 +1,44 @@
+### 🧾 Objetivo da aula
+Aprender a **atualizar dados** de uma tabela em um banco de dados SQLite usando Python.
+
+---
+
+### 🛠️ Etapas do código explicadas
+
+1. **Conexão com o banco de dados**  
+   `sqlite3.connect('title.db')` abre o banco de dados local chamado `title.db`.
+
+2. **Criação do cursor**  
+   O cursor permite executar comandos SQL e navegar pelos resultados.
+
+3. **Entrada de dados do usuário**  
+   O programa solicita o `id`, o novo `name` e o novo `year` do filme que será atualizado.
+
+4. **Atualização dos dados**  
+   O comando `UPDATE` altera os campos `name` e `year` do filme com base no `id` informado.  
+   → Para atualizar mais colunas, basta adicionar mais campos após `SET`, separados por vírgulas.
+
+5. **Confirmação da alteração**  
+   `connection.commit()` salva as mudanças no banco.
+
+6. **Fechamento da conexão**  
+   `connection.close()` encerra a comunicação com o banco de dados.
+
+---
+
+### ⚠️ Ponto importante adicionado: verificação do registro
+
+Antes de atualizar, é **recomendado verificar se o registro existe**, para evitar que o comando `UPDATE` não afete nenhuma linha. Exemplo:
+
+```python
+cursor.execute("SELECT * FROM movies WHERE id = ?", (id,))
+if cursor.fetchone():
+    cursor.execute("""
+        UPDATE movies SET name = ?, year = ?
+        WHERE id = ?
+    """, (name, year, id))
+    connection.commit()
+    print('Dados atualizados com sucesso!')
+else:
+    print('Nenhum filme encontrado com esse ID.')
+```

@@ -1,0 +1,58 @@
+## 🧭 Passo a passo para criar uma tabela no PostgreSQL
+
+### 🛠️ 1. Instale e abra o PostgreSQL
+- Se ainda não instalou, baixe em [postgresql.org/download](https://www.postgresql.org/download/)
+- Após instalar, abra o **pgAdmin** (interface gráfica) ou use o **terminal** com o comando `psql`
+
+---
+
+### 📁 2. Conecte-se ao banco de dados
+No pgAdmin:
+- Clique em **Servers > PostgreSQL > Databases**
+- Crie um novo banco ou selecione um existente
+
+No terminal:
+```bash
+psql -U postgres -d nome_do_banco (vc coloca o nome do banco de dado que deseja criar, usarei fliperama, no ligar de nome_do_banco)
+```
+
+---
+
+### 🧾 3. Escreva o código SQL para criar a tabela, colocar NOT NULL, significa que nao pode ficar nulo, sem informação.
+
+```sql
+CREATE TABLE fliperama (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    year INTEGER NOT NULL,
+    score REAL NOT NULL
+);
+```
+
+#### 🔍 Explicação:
+- `id SERIAL PRIMARY KEY` → cria um campo numérico que se auto incrementa
+- `TEXT` → para nomes
+- `INTEGER` → para o ano
+- `REAL` → para notas decimais (como 8.7)
+
+---
+
+### 📌 4. Onde colocar esse código SQL?
+
+Você pode executar esse código:
+
+- **No pgAdmin**:  
+  Vá em **Tools > Query Tool**, cole o código e clique em **Execute (F5)**
+
+- **No terminal `psql`**:  
+  Cole o código diretamente e pressione Enter
+
+---
+
+### ✅ 5. Verifique se a tabela foi criada
+
+```sql
+SELECT * FROM fliperama;
+```
+
+Se não houver erro, a tabela está pronta para receber dados!
