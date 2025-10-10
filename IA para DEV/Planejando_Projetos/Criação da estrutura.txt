@@ -1,0 +1,33 @@
+Criação da estrutura de arquivos
+
+Objetivo da Aula:
+
+Nesta aula, vamos aprender a utilizar o ChatGPT para gerar a estrutura de arquivos e diretórios de um projeto de software com base nas tecnologias específicas utilizadas, como Node.js e React, considerando telas, endpoints e modelos de dados. Ao final, você será capaz de criar um prompt para gerar automaticamente todos os arquivos e pastas necessários, otimizando o início do desenvolvimento de seus projetos.
+
+1. Planejando a Estrutura do Projeto:
+
+O primeiro passo para qualquer projeto de software eficiente é o planejamento de sua estrutura. Isso inclui diretórios para componentes, serviços, modelos de dados e arquivos de configuração.
+
+Prompt:
+
+"Agindo como um arquiteto de software e com base em um projeto usando as tecnologias [X], descreva a estrutura ideal de diretórios e arquivos (arquivo por arquivo), considerando telas que temos as telas [Y], os endpoints [Z] e o modelo de dados [W]"
+
+Inclua detalhes sobre as tecnologias, funcionalidades das telas, endpoints e modelos de dados para gerar uma estrutura de projeto bem organizada.
+
+2. Gerando Script para Criação da Estrutura:
+
+Após definir a estrutura, o próximo passo é automatizar a criação dos diretórios e arquivos.
+
+Prompt:
+
+"Crie um script em Bash (ou outro shell de sua preferência) que, ao ser executado no terminal, gere automaticamente a estrutura de diretórios e arquivos (não gerados automaticamente pelas ferramentas) baseada na estrutura planejada."
+
+Esse script deve incluir comandos para criar diretórios e arquivos vazios, prontos para serem preenchidos com o código do projeto.
+
+Exercício prático:
+
+Escolha um projeto que você gostaria de iniciar e defina as tecnologias, telas, endpoints e modelos de dados que ele utilizará. Use o ChatGPT para gerar a estrutura de diretórios e arquivos deste projeto e, em seguida, crie o script para automatizar esse processo. Execute o script no seu terminal e verifique se a estrutura gerada corresponde ao planejado.
+
+Conclusão:
+
+Nesta aula, aprendemos como o ChatGPT pode ser um aliado valioso no planejamento e estruturação inicial de projetos de software. Ao utilizar a IA para gerar a estrutura de arquivos e diretórios com base nas especificidades do projeto, e então criar um script para automatizar esse processo, economizamos tempo e garantimos uma organização consistente desde o início do desenvolvimento.

@@ -1,0 +1,37 @@
+Roteiro de desenvolvimento com IA
+
+Objetivo da Aula:
+
+Nesta aula, você aprenderá a criar e refinar um roteiro de desenvolvimento para projetos de software usando um Gestor de Projetos IA. O foco será em como delegar e organizar as tarefas de desenvolvimento de maneira eficiente, considerando diferentes níveis de dificuldade e competência dos desenvolvedores. Essa habilidade é crucial para otimizar recursos e tempos de desenvolvimento em qualquer projeto.
+
+Conteúdo da Aula:
+
+1. Criando o Roteiro de Desenvolvimento Inicial:
+
+O primeiro passo é definir claramente o escopo do projeto, incluindo telas, estrutura de arquivos, endpoints e banco de dados. Com essas informações em mãos, você usará um prompt específico para gerar uma lista de tarefas detalhada. Este prompt ajuda a organizar o trabalho a ser feito, atribuindo níveis de dificuldade que variam de 0 a 100 e categorizando as tarefas por níveis de habilidade: júnior, pleno e sênior.
+
+Prompt para uso:
+
+Agindo como um gerente de projetos, e dada as telas [X], estrutura de arquivos [Y], endpoints [Z] e banco de dados [W], crie uma lista de tarefas para o desenvolvimento dos códigos deste software colocando as dificuldades entre 0 e 100 (dizendo se é júnior, pleno e sênior), quebre as tarefas em pedaços pequenos e devolva as tarefas em ordem cronológica.
+
+Lembre-se de adaptar o prompt com os detalhes específicos do seu projeto.
+
+2. Refinando o Roteiro de Desenvolvimento:
+
+Com a lista inicial de tarefas em mãos, o próximo passo é refinar esse roteiro. O objetivo é assegurar que todas as tarefas sejam acessíveis a desenvolvedores de nível pleno ou inferior, promovendo assim uma distribuição mais eficiente do trabalho.
+
+Prompt para refinamento:
+
+Dada as tarefas geradas, quebre elas em tarefas menores até que fiquem todos no máximo em nível pleno.
+
+Este exercício de decomposição ajuda a garantir que cada tarefa seja clara, gerenciável e adequadamente designada, otimizando o processo de desenvolvimento.
+
+Exercício prático:
+
+Utilize o primeiro prompt para criar um roteiro de desenvolvimento baseado em um projeto hipotético ou real. Preencha os espaços [X], [Y], [Z], e [W] com informações específicas do seu projeto.
+
+Após criar sua lista inicial de tarefas, aplique o segundo prompt para refinar este roteiro. Quebre as tarefas de nível sênior em subtarefas menores, assegurando que todas possam ser realizadas por desenvolvedores de nível pleno ou júnior.
+
+Conclusão:
+
+Dominar a arte de criar e refinar roteiros de desenvolvimento com o auxílio de um Gestor de Projetos IA é uma habilidade valiosa para qualquer programador. Essa metodologia não apenas otimiza o fluxo de trabalho, como também promove uma melhor distribuição de tarefas, garantindo que os projetos sejam concluídos de maneira eficiente e dentro dos prazos estabelecidos. Com a prática, você se tornará mais hábil em delegar tarefas de forma eficaz, maximizando o potencial da sua equipe.
