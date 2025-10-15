@@ -7,7 +7,7 @@ import psycopg2
 conn = psycopg2.connect(
     database = 'fliperama',
     user = 'postgres',
-    password = '123456', #use a senha que vc colocou na instalação.
+    password = '1234', #use a senha que vc colocou na instalação.
     host = 'localhost',
     port = '5432'
 )
