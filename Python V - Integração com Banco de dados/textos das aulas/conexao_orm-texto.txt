@@ -1,0 +1,92 @@
+### 🧩 1. Importações
+
+```python
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from dotenv import dotenv_values
+```
+
+- `create_engine`: cria a conexão com o banco.
+- `sessionmaker`: gera sessões para interagir com o banco.
+- `declarative_base`: base para criar classes ORM (modelos de tabelas).
+- `dotenv_values`: carrega variáveis do arquivo `.env`.
+
+---
+
+### 🔐 2. Carregando variáveis do `.env`
+
+```python
+config = dotenv_values('.env')
+```
+
+- Lê o arquivo `.env` e retorna um dicionário com as variáveis de ambiente.
+
+---
+
+### 🔧 3. Pegando os dados de conexão
+
+```python
+user = config['DB_USER']
+password = config['DB_SENHA']
+host = config['DB_HOST']
+database = 'blog'
+```
+
+- Extrai os dados de acesso ao banco.
+- O nome do banco (`blog`) está definido diretamente no código.
+
+---
+
+### 🔗 4. Montando a URI de conexão
+
+```python
+DATABASE_URI = f'postgresql://{user}:{password}@{host}/{database}'
+```
+
+- Cria a **string de conexão** no formato que o SQLAlchemy espera para PostgreSQL.
+
+---
+
+### 🚀 5. Criando o engine
+
+```python
+engine = create_engine(DATABASE_URI)
+```
+
+- O **engine** é o objeto que gerencia a conexão com o banco.
+- Ele é usado para executar comandos e criar tabelas.
+
+---
+
+### 🧠 6. Criando a sessão
+
+```python
+Session = sessionmaker(bind=engine)
+session = Session()
+```
+
+- `sessionmaker` cria uma **fábrica de sessões**.
+- `session` é a instância usada para fazer operações no banco (inserir, consultar, atualizar, etc.).
+
+---
+
+### 🏗️ 7. Definindo a base ORM
+
+```python
+Base = declarative_base()
+```
+
+- `Base` é a **classe base** para definir os modelos ORM.
+- Toda tabela será uma classe que herda de `Base`.
+
+---
+
+### ✅ Resumo
+
+Esse código prepara o ambiente para usar SQLAlchemy com PostgreSQL:
+
+- Lê configurações do `.env`
+- Cria a conexão com o banco
+- Prepara a sessão para interações
+- Define a base para criar modelos de tabelas

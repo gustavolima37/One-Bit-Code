@@ -1,0 +1,71 @@
+### 🧩 1. Importando a conexão
+
+```python
+from conexao_postgresql import conn
+```
+
+- Importa a variável `conn` de um módulo chamado `conexao_postgresql.py`, que contém a configuração da conexão com o banco.
+
+---
+
+### 🧠 2. Criando o cursor
+
+```python
+cursor_obj = conn.cursor()
+```
+
+- Cria um **cursor**, que é o objeto usado para executar comandos SQL no banco.
+
+---
+
+### 🗑️ 3. Definindo o comando SQL
+
+```python
+sql = """
+    DELETE FROM game
+    WHERE id = %s
+"""
+```
+
+- Esse comando `DELETE` remove um registro da tabela `game` onde o campo `id` corresponde ao valor informado.
+- O `%s` é um **placeholder** que será substituído pelo valor `6`.
+
+---
+
+### 🔄 4. Executando a exclusão
+
+```python
+cursor_obj.execute(sql, (6,))
+```
+
+- Executa o comando SQL, passando o valor `6` como parâmetro.
+- O uso de `(6,)` é uma **tupla com um único elemento**, necessária para que o `execute()` funcione corretamente.
+
+---
+
+### 💾 5. Salvando a alteração
+
+```python
+conn.commit()
+```
+
+- Confirma a exclusão no banco de dados.
+- Sem esse comando, a remoção não seria efetivada.
+
+---
+
+### ✅ 6. Finalizando
+
+```python
+print('Dado removido com sucesso')
+conn.close()
+```
+
+- Exibe uma mensagem de sucesso.
+- Fecha a conexão com o banco, liberando recursos.
+
+---
+
+### 🛡️ Dica extra
+
+Se quiser garantir que o `id = 6` existe antes de tentar remover, você pode fazer uma verificação com `SELECT` antes do `DELETE`. E se quiser tratar erros (como tentar remover um ID inexistente), posso te mostrar como usar `try/except`.

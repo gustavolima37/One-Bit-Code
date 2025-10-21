@@ -1,0 +1,80 @@
+### 🧩 1. Importando a conexão
+
+```python
+from conexao_postgresql import conn
+```
+
+- Você está importando a variável `conn` de um módulo chamado `conexao_postgresql.py`.
+- Esse módulo deve conter o código que conecta ao banco PostgreSQL usando `psycopg2`.
+
+---
+
+### 🧠 2. Criando o cursor
+
+```python
+cursor_obj = conn.cursor()
+```
+
+- O **cursor** é o objeto que permite executar comandos SQL no banco.
+- Ele funciona como uma ponte entre o Python e o PostgreSQL.
+
+---
+
+### 🎮 3. Lista de jogos
+
+```python
+games = [
+    ('Start Wars Survivor', 2023, 9.0),
+    ('Luis Mansion 3', 2019, 9.0)
+]
+```
+
+- Aqui você define uma lista de tuplas, onde cada tupla representa um jogo com:
+  - Nome (`name`)
+  - Ano de lançamento (`year`)
+  - Nota (`score`)
+
+---
+
+### 📥 4. Inserindo os dados
+
+```python
+for game in games:
+    cursor_obj.execute("""
+        INSERT INTO game(name, year, score)
+        VALUES (%s, %s, %s)
+    """, game)
+```
+
+- O `for` percorre cada tupla da lista `games`.
+- Para cada jogo, executa um comando `INSERT INTO` na tabela `game`.
+- Os `%s` são **placeholders** que recebem os valores da tupla `game`.
+
+---
+
+### 💾 5. Salvando no banco
+
+```python
+conn.commit()
+```
+
+- Esse comando **confirma** as alterações no banco.
+- Sem ele, os dados não seriam salvos de forma permanente.
+
+---
+
+### ✅ 6. Finalizando
+
+```python
+print('Dados inseridos com sucesso!')
+conn.close()
+```
+
+- Exibe uma mensagem de sucesso.
+- Fecha a conexão com o banco, liberando recursos.
+
+---
+
+### 🛡️ Dica extra
+
+Se quiser evitar erros em caso de falha na conexão ou na query, você pode usar `try/except` para tratar exceções. Posso te mostrar como fazer isso com segurança se quiser.

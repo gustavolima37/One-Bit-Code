@@ -1,0 +1,65 @@
+## 🧩 1. Importação de bibliotecas
+
+```python
+import psycopg2
+from dotenv import dotenv_values
+```
+
+- `psycopg2`: biblioteca que permite conectar e interagir com bancos de dados PostgreSQL usando Python.
+- `dotenv_values`: função da biblioteca `python-dotenv` que lê o conteúdo de um arquivo `.env` e retorna um **dicionário** com as variáveis definidas lá.
+
+---
+
+### 📦 2. Carregando variáveis do `.env`
+
+```python
+config = dotenv_values('.env')
+```
+
+- Lê o arquivo `.env` que deve conter algo como:
+
+  ```
+  DB_NAME=meubanco
+  DB_USER=usuario
+  DB_PASSWORD=senha123
+  DB_HOST=localhost
+  DB_PORT=5432
+  ```
+
+- O resultado é um dicionário Python:
+
+  ```python
+  {
+    "DB_NAME": "meubanco",
+    "DB_USER": "usuario",
+    "DB_PASSWORD": "senha123",
+    "DB_HOST": "localhost",
+    "DB_PORT": "5432"
+  }
+  ```
+
+---
+
+### 🔗 3. Conectando ao banco de dados
+
+```python
+conn = psycopg2.connect(
+    database=config["DB_NAME"],
+    user=config["DB_USER"],
+    password=config["DB_PASSWORD"],
+    host=config["DB_HOST"],
+    port=config["DB_PORT"]
+)
+```
+
+- Aqui você está usando os valores do dicionário `config` para preencher os parâmetros da conexão.
+- Isso evita deixar senhas e dados sensíveis diretamente no código.
+- A variável `conn` agora representa a conexão ativa com o banco PostgreSQL — você pode usá-la para executar queries, inserir dados, etc.
+
+---
+
+### ✅ Vantagens desse modelo
+
+- **Segurança**: dados sensíveis ficam fora do código.
+- **Organização**: facilita mudar configurações sem alterar o script.
+- **Portabilidade**: ideal para projetos compartilhados ou em produção.

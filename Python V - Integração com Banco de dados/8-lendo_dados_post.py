@@ -1,4 +1,9 @@
 from conexao_postgresql import conn
 
 cursor_obj = conn.cursor()
-print(cursor_obj)
+
+cursor_obj.execute('SELECT * FROM game')
+
+result = cursor_obj.fetchall()
+
+print(result)

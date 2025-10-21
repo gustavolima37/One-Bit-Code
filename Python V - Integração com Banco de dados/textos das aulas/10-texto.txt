@@ -1,0 +1,74 @@
+### 🧩 1. Importando a conexão
+
+```python
+from conexao_postgresql import conn
+```
+
+- Você está importando a variável `conn` de um módulo chamado `conexao_postgresql.py`.
+- Esse módulo contém a configuração da conexão com o banco PostgreSQL.
+
+---
+
+### 🧠 2. Criando o cursor
+
+```python
+cursor_obj = conn.cursor()
+```
+
+- O **cursor** é o objeto que permite executar comandos SQL no banco.
+- Ele funciona como uma ponte entre o Python e o PostgreSQL.
+
+---
+
+### ✏️ 3. Definindo o comando SQL
+
+```python
+sql = """
+    UPDATE game
+    SET name = %s
+    WHERE id = %s
+"""
+```
+
+- Esse comando `UPDATE` altera o valor da coluna `name` na tabela `game`.
+- O `%s` são **placeholders** que serão substituídos pelos valores reais.
+
+---
+
+### 🔄 4. Executando a atualização
+
+```python
+cursor_obj.execute(sql, ('Fifa 23', 5))
+```
+
+- Aqui você está dizendo: “Atualize o nome do jogo para `'Fifa 23'` onde o `id` for `5`”.
+- Os valores são passados como uma tupla: `('Fifa 23', 5)`.
+
+---
+
+### 💾 5. Salvando a alteração
+
+```python
+conn.commit()
+```
+
+- Esse comando confirma a alteração no banco.
+- Sem ele, a mudança não seria salva de forma permanente.
+
+---
+
+### ✅ 6. Finalizando
+
+```python
+print('Dados atualizados com sucesso!')
+conn.close()
+```
+
+- Exibe uma mensagem de sucesso.
+- Fecha a conexão com o banco, liberando recursos.
+
+---
+
+### 🛡️ Dica extra
+
+Se quiser garantir que o `id = 5` existe antes de atualizar, você pode fazer uma verificação com `SELECT` antes do `UPDATE`. E se quiser tratar erros, posso te mostrar como usar `try/except` para evitar falhas silenciosas.

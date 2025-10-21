@@ -1,0 +1,58 @@
+**Além da Orientação a Objetos, os paradigmas mais usados para integrar Python com bancos de dados relacionais são: programação procedural, funcional e orientada a eventos. Cada um oferece abordagens diferentes para manipular dados e estruturar a lógica de acesso ao banco.**
+
+---
+
+### 🧭 Principais paradigmas além da Orientação a Objetos
+
+#### 1. 🧮 **Programação Procedural**
+- **Como funciona**: Baseada em funções e sequência de comandos.
+- **Aplicação com banco**: Usa funções simples para abrir conexão, executar queries e fechar conexão.
+- **Exemplo**:
+  ```python
+  def inserir_dado(nome, ano):
+      conn = conectar()
+      cursor = conn.cursor()
+      cursor.execute("INSERT INTO game (name, year) VALUES (%s, %s)", (nome, ano))
+      conn.commit()
+      conn.close()
+  ```
+
+#### 2. 🧠 **Programação Funcional**
+- **Como funciona**: Usa funções puras, evita estado compartilhado e efeitos colaterais.
+- **Aplicação com banco**: Pode usar funções como `map`, `filter`, `reduce` para transformar dados antes ou depois da consulta.
+- **Exemplo**:
+  ```python
+  jogos = cursor.fetchall()
+  nomes = list(map(lambda jogo: jogo[0], jogos))
+  ```
+
+#### 3. 🔄 **Programação Orientada a Eventos**
+- **Como funciona**: Reage a eventos como cliques, requisições ou mudanças de estado.
+- **Aplicação com banco**: Comum em aplicações web com frameworks como Flask ou Django, onde ações do usuário disparam consultas ao banco.
+- **Exemplo**:
+  ```python
+  @app.route('/jogos')
+  def listar_jogos():
+      conn = conectar()
+      cursor = conn.cursor()
+      cursor.execute("SELECT * FROM game")
+      return jsonify(cursor.fetchall())
+  ```
+
+---
+
+### 🧰 Comparativo rápido
+
+| Paradigma               | Estilo de código       | Uso típico com banco de dados |
+|------------------------|------------------------|-------------------------------|
+| Procedural             | Funções sequenciais    | Scripts simples e diretos     |
+| Funcional              | Funções puras e `map`  | Transformações de dados       |
+| Orientado a Eventos    | Reações a ações        | Aplicações web interativas    |
+| Orientado a Objetos    | Classes e métodos      | Projetos estruturados e escaláveis |
+
+---
+
+### 📚 Fontes e aprofundamento
+
+- [Awari – Guia completo sobre paradigmas em Python](https://awari.com.br/paradigmas-de-linguagem-de-programacao-em-python-guia-completo-para-iniciantes/)
+- [DIO – Introdução aos paradigmas em Python](https://www.dio.me/articles/entendendo-paradigmas-de-linguagens-de-programacao-com-python-6a63cbf65126)

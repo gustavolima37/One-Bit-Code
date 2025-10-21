@@ -3,22 +3,20 @@ Nessa aula vamos aprender a ler dados da tabela do PostgreSQL utilizando a lingu
 Precisamos instalar a biblioteca psycopg2 com o comando pip install psycopg2.
 '''
 import psycopg2
-import os
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 
-# Carrega variáveis do .env
-load_dotenv()
+config = dotenv_values('.env')
 
 # Conecta ao banco usando variáveis de ambiente
-conn = psycopg2.connect(
-    database = os.getenv("DB_NAME"),
-    user = os.getenv("DB_USER"),
-    password = os.getenv("DB_PASSWORD"), # senha guardada
-    host = os.getenv("DB_HOST"),
-    port = os.getenv("DB_PORT")
+conn = psycopg2.connect( 
+                        database=config["DB_NAME"], 
+                        user=config["DB_USER"], 
+                        password=config["DB_PASSWORD"], 
+                        host=config["DB_HOST"], 
+                        port=config["DB_PORT"] 
 )
 
 '''
 Essa informações estao no pgadmin 4, em PostgreSQL abaixo de Servers, clica e rola a tela para baixo.
 '''
-print("psycopg2 está funcionando!")
+

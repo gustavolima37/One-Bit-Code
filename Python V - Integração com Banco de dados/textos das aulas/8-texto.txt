@@ -1,0 +1,70 @@
+### 🧩 1. Importando a conexão
+
+```python
+from conexao_postgresql import conn
+```
+
+- Aqui você está **importando a variável `conn`** de um módulo chamado `conexao_postgresql.py`.
+- Esse módulo provavelmente contém o código que estabelece a conexão com o banco PostgreSQL (como aquele que você mostrou antes com `psycopg2.connect()`).
+- Assim, você **reaproveita** a conexão sem precisar reescrever tudo.
+
+---
+
+### 🧠 2. Criando um cursor
+
+```python
+cursor_obj = conn.cursor()
+```
+
+- O **cursor** é um objeto que permite **executar comandos SQL** no banco.
+- Ele funciona como uma ponte entre o Python e o PostgreSQL.
+- Com ele, você pode fazer `SELECT`, `INSERT`, `UPDATE`, etc.
+
+---
+
+### 🔍 3. Executando uma consulta
+
+```python
+cursor_obj.execute('SELECT * FROM game')
+```
+
+- Aqui você está executando uma **query SQL** que seleciona todos os registros da tabela `game`.
+- O `*` significa “todos os campos”.
+
+---
+
+### 📥 4. Pegando os resultados
+
+```python
+result = cursor_obj.fetchall()
+```
+
+- `fetchall()` retorna **todos os resultados** da consulta como uma lista de tuplas.
+- Cada tupla representa uma linha da tabela `game`.
+
+---
+
+### 🖨️ 5. Exibindo os dados
+
+```python
+print(result)
+```
+
+- Imprime no terminal os dados retornados da tabela.
+- Exemplo de saída (dependendo dos dados):
+
+  ```python
+  [('FIFA 23', 'Esportes', 2022), ('Minecraft', 'Sandbox', 2011)]
+  ```
+
+---
+
+### ✅ Resumo geral
+
+Esse código:
+
+1. Usa uma conexão já configurada.
+2. Cria um cursor para interagir com o banco.
+3. Executa uma consulta SQL.
+4. Recupera os dados.
+5. Imprime os resultados.

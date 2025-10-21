@@ -1,0 +1,66 @@
+**Uma ORM (Object-Relational Mapping) é uma técnica que conecta a programação orientada a objetos com bancos de dados relacionais, permitindo que você manipule dados do banco usando objetos e classes em vez de comandos SQL.**
+
+---
+
+### 🧠 O que significa ORM?
+
+- **ORM** é a sigla para *Object-Relational Mapping* (Mapeamento Objeto-Relacional).
+- Ela atua como uma **ponte entre o código Python (ou Java, C#, etc.) e o banco de dados**, traduzindo objetos em tabelas e vice-versa.
+
+---
+
+### 🛠️ Como funciona na prática?
+
+Imagine que você tem uma classe Python chamada `Game`:
+
+```python
+class Game:
+    def __init__(self, name, year, score):
+        self.name = name
+        self.year = year
+        self.score = score
+```
+
+Com uma ORM, você pode salvar esse objeto diretamente no banco de dados sem escrever SQL:
+
+```python
+new_game = Game(name="FIFA 23", year=2023, score=9.0)
+session.add(new_game)
+session.commit()
+```
+
+Por trás dos panos, a ORM converte isso em:
+
+```sql
+INSERT INTO game (name, year, score) VALUES ('FIFA 23', 2023, 9.0);
+```
+
+---
+
+### ✅ Vantagens de usar ORM
+
+- **Produtividade**: menos código SQL para escrever.
+- **Manutenção facilitada**: alterações no modelo refletem no banco.
+- **Segurança**: ajuda a evitar SQL Injection.
+- **Portabilidade**: facilita trocar de banco (PostgreSQL, MySQL, etc.).
+
+---
+
+### ⚠️ Desvantagens
+
+- Pode ser **menos performática** em consultas complexas.
+- Pode **ocultar detalhes importantes** do banco, dificultando otimizações.
+- Nem sempre é ideal para sistemas que exigem controle total sobre o SQL.
+
+---
+
+### 🔧 Exemplos de ORM populares
+
+| Linguagem | ORM mais usada         |
+|----------|------------------------|
+| Python   | SQLAlchemy, Django ORM |
+| Java     | Hibernate               |
+| C#       | Entity Framework        |
+| JavaScript | Sequelize, TypeORM   |
+
+---
