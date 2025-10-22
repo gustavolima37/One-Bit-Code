@@ -1,0 +1,72 @@
+### 🧱 Estrutura do Código
+
+```python
+from conexao_orm import Base
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
+```
+
+- **`Base`**: é a classe base do SQLAlchemy usada para declarar modelos. Geralmente vem de `declarative_base()` e está definida no módulo `conexao_orm`.
+- **`Column`, `Integer`, `String`**: são tipos de dados e construtores de colunas que representam os campos da tabela.
+- **`relationship`**: define o relacionamento entre tabelas (neste caso, entre `User` e `Post`).
+
+---
+
+### 🧑‍💻 Classe `User`
+
+```python
+class User(Base):
+    __tablename__ = 'users'
+```
+
+- Define que essa classe será mapeada para a tabela `users` no PostgreSQL.
+
+---
+
+### 🧩 Colunas da Tabela
+
+```python
+id = Column(Integer, primary_key=True)
+name = Column(String)
+email = Column(String)
+```
+
+- `id`: chave primária da tabela, tipo inteiro.
+- `name`: nome do usuário, tipo string.
+- `email`: email do usuário, tipo string.
+
+---
+
+### 🔗 Relacionamento com `Post`
+
+```python
+posts = relationship('Post', back_populates='author')
+```
+
+- Define uma **relação um-para-muitos**: um usuário pode ter vários posts.
+- `'Post'`: é o nome da classe que representa a tabela de posts.
+- `back_populates='author'`: indica que a classe `Post` tem um campo chamado `author` que referencia o `User`.
+
+---
+
+### 🏗️ Construtor da Classe
+
+```python
+def __init__(self, name, email):
+    self.name = name
+    self.email = email
+```
+
+- Permite criar instâncias de `User` com nome e email diretamente.
+
+---
+
+### 🗃️ Exemplo de uso
+
+```python
+novo_usuario = User(name="Gustavo", email="gustavo@email.com")
+session.add(novo_usuario)
+session.commit()
+```
+
+Isso cria um novo usuário e salva no banco PostgreSQL via SQLAlchemy.

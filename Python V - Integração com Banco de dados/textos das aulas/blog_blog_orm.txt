@@ -1,0 +1,104 @@
+Esse script, monta um pequeno sistema de interação com o banco de dados PostgreSQL usando SQLAlchemy, permitindo cadastrar usuários, associar posts a eles e consultar tudo via terminal. Vamos fazer um resumo funcional e destacar pontos importantes:
+
+---
+
+### 🧭 Visão Geral do Script
+
+- **Objetivo**: Criar um menu interativo para manipular dados de usuários e posts.
+- **Tecnologias**: Python + SQLAlchemy + PostgreSQL.
+- **Componentes principais**:
+  - Criação de tabelas
+  - Inserção de dados
+  - Consulta com relacionamento
+
+---
+
+### 🧱 Criação das Tabelas
+
+```python
+Base.metadata.create_all(engine)
+```
+
+- Gera as tabelas `users` e `posts` no banco, com base nas classes `User` e `Post`.
+
+---
+
+### 📋 Menu de Opções
+
+```python
+def show_menu():
+    print('Menu de Opções:')
+    print('1. Adicionar Usuário')
+    print('2. Adicionar Post')
+    print('3. Consultar Usuários e seus Posts')
+    print('4. Sair')
+```
+
+- Exibe as opções disponíveis para o usuário interagir com o sistema.
+
+---
+
+### 👤 Adicionar Usuário
+
+```python
+def add_user():
+    name = input('Nome:\n')
+    email = input('Email:\n')
+    user = User(name, email)
+    session.add(user)
+    session.commit()
+```
+
+- Cria um novo usuário e salva no banco.
+
+---
+
+### 📝 Adicionar Post
+
+```python
+def add_post():
+    title = input('Título:\n')
+    content = input('Conteúdo:\n')
+    author_id = input('Id do Autor:\n')
+    user = session.query(User).filter_by(id=author_id).first()
+```
+
+- Busca o autor pelo `id`.
+- Se encontrado, cria o post e associa ao usuário via `author=user`.
+
+⚠️ **Dica**: `author_id` vem como string do `input()`, então é bom fazer `int(author_id)` para evitar problemas de tipo.
+
+---
+
+### 🔍 Consultar Usuários e seus Posts
+
+```python
+def query_users_posts():
+    users = session.query(User).join(User.posts).order_by(User.name).all()
+```
+
+- Faz uma **consulta com join** entre `User` e `Post`.
+- Exibe os dados de cada usuário e seus respectivos posts.
+
+---
+
+### 🧠 Sugestão de Loop Principal
+
+Se quiser tornar o script interativo, pode adicionar:
+
+```python
+while True:
+    show_menu()
+    choice = input('Escolha uma opção:\n')
+    if choice == '1':
+        add_user()
+    elif choice == '2':
+        add_post()
+    elif choice == '3':
+        query_users_posts()
+    elif choice == '4':
+        print('Saindo...')
+        break
+    else:
+        print('Opção inválida!')
+```

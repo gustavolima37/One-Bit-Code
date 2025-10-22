@@ -1,0 +1,54 @@
+Esse trecho finaliza muito bem o sistema de blog no terminal, Ele funciona como o **ponto de entrada** do programa, controlando o fluxo com base nas opções do usuário. Aqui vai um resumo e algumas sugestões para deixar tudo ainda mais robusto:
+
+---
+
+### 🧭 O que esse código faz
+
+- **Importa** as funções principais do módulo `Blog`.
+- **Exibe o menu** em loop até o usuário escolher sair.
+- **Executa ações** com base na opção escolhida:
+  - `'1'`: adiciona um novo usuário.
+  - `'2'`: adiciona um novo post.
+  - `'3'`: consulta usuários e seus posts.
+  - `'4'`: encerra o programa.
+  - Qualquer outro valor: exibe mensagem de erro.
+
+---
+
+### ✅ Sugestões de melhoria
+
+1. **Conversão segura de entrada numérica**:
+   Para evitar erros se o usuário digitar algo inesperado, você pode validar a entrada:
+
+   ```python
+   option = input('Selecione uma opção:\n').strip()
+   ```
+
+2. **Tratamento de exceções**:
+   Envolver as chamadas em `try/except` ajuda a capturar erros inesperados:
+
+   ```python
+   try:
+       if option == '1':
+           add_user()
+       elif option == '2':
+           add_post()
+       elif option == '3':
+           query_users_posts()
+       elif option == '4':
+           print('Fechando o Sistema.')
+           break
+       else:
+           print('Informe uma opção válida!')
+   except Exception as e:
+       print(f'Ocorreu um erro: {e}')
+   ```
+
+3. **Mensagem de boas-vindas**:
+   Um toque simpático no início:
+
+   ```python
+   print('Bem-vindo ao Sistema de Blog!\n')
+   ```
+
+---

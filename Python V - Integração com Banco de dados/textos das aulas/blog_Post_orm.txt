@@ -1,0 +1,83 @@
+Agora com a classe `Post`, você completou o relacionamento bidirecional entre usuários e postagens usando SQLAlchemy. Vamos analisar esse mapeamento linha por linha:
+
+---
+
+### 🧱 Estrutura da Classe `Post`
+
+```python
+class Post(Base):
+    __tablename__ = 'posts'
+```
+
+- Define que essa classe será mapeada para a tabela `posts` no banco de dados.
+
+---
+
+### 📌 Colunas da Tabela
+
+```python
+id = Column(Integer, primary_key=True)
+title = Column(String)
+content = Column(String)
+author_id = Column(Integer, ForeignKey('users.id'))
+```
+
+- `id`: chave primária da tabela `posts`.
+- `title`: título do post.
+- `content`: conteúdo do post.
+- `author_id`: chave estrangeira que referencia `users.id`, ou seja, o ID do autor do post.
+
+---
+
+### 🔗 Relacionamento com `User`
+
+```python
+author = relationship('User', back_populates='posts')
+```
+
+- Cria a **ligação reversa** com a classe `User`.
+- `back_populates='posts'` conecta com o atributo `posts` definido na classe `User`, permitindo navegação bidirecional:
+  - `post.author` retorna o usuário dono do post.
+  - `user.posts` retorna a lista de posts daquele usuário.
+
+---
+
+### 🏗️ Construtor
+
+```python
+def __init__(self, title, content, author):
+    self.title = title
+    self.content = content
+    self.author = author
+```
+
+- Permite instanciar um post já associando-o a um usuário:
+  
+```python
+novo_post = Post("Meu primeiro post", "Conteúdo aqui", usuario_existente)
+```
+
+---
+
+### 🧠 Como tudo se conecta
+
+Com as duas classes (`User` e `Post`) mapeadas, você pode fazer consultas e inserções como:
+
+```python
+# Criar usuário
+usuario = User(name="Gustavo", email="gustavo@email.com")
+session.add(usuario)
+session.commit()
+
+# Criar post associado
+post = Post(title="Olá mundo", content="Esse é meu primeiro post!", author=usuario)
+session.add(post)
+session.commit()
+```
+
+E também navegar entre eles:
+
+```python
+print(post.author.name)        # Nome do autor do post
+print(usuario.posts[0].title)  # Título do primeiro post do usuário
+```
